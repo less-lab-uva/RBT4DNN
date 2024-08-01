@@ -1,0 +1,4 @@
+Digit 3 with a small area, long length, very thin, right aligned, narrow and high height.
+Digit 0 with a large area, long length, thin, right aligned, wide and high height.
+Digit with extremely right aligned
+Thick digit
