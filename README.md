@@ -38,9 +38,9 @@ This repository is for the update of the project "RBT4DNN"
 
 ### Text-conditioned LDM
 ***Texts:***
-- Digit 3 with a small area, long length, very thin, right aligned, narrow and high height. (first row of the image grid)
-- Digit 0 with a large area, long length, thin, right aligned, wide and high height. (second row of the image grid)
-- Digit with extremely right aligned. (third row of the image grid)
+- Digit 3 with a small area, long length, very thin, right leaned, narrow and high height. (first row of the image grid)
+- Digit 0 with a large area, long length, thin, right leaned, wide and high height. (second row of the image grid)
+- Digit with extremely right leaned. (third row of the image grid)
 - Thick digit. (fourth row of the image grid)
   
 ![Image of text conditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_text_cond.png)
