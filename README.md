@@ -22,6 +22,19 @@ This repository is for the update of the project "RBT4DNN"
 
 ![Image of text conditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_text_cond.png)
 
+Updated results:
+
+![New Image of text conditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebhq.png)
+
+## S3C
+
+### Text-conditioned LDM
+***Texts:***
+- A car is 4 to 7 meters away, in front, to the right of, and in the opposing lane.  A car is 7 to 10 meters away, in front, slightly to the right of, and in the opposing lane. (first row of the image grid)
+- Two cars are 7 to 10 meters away, in front, slightly to the right of, and in the opposing lane. (second row of the image grid)
+
+![Image of text conditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/s3c.png)
+
 ## MNIST
 ### VQVAE
 ***Input image***
