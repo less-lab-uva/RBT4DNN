@@ -28,6 +28,10 @@ Updated results:
 
 ## S3C
 
+### Unconditional
+
+![Image of unconditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/s3c_uncond.png)
+
 ### Text-conditioned LDM
 ***Texts:***
 - A car is 4 to 7 meters away, in front, to the right of, and in the opposing lane.  A car is 7 to 10 meters away, in front, slightly to the right of, and in the opposing lane. (first row of the image grid)
