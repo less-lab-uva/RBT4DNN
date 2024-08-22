@@ -6,6 +6,7 @@ This repository is for the update of the project "RBT4DNN"
 | ------ | ----- | ----- | ------ | -------- | ------- | ------- |
 | CelebAHQ | Uncond | 70.086 | 1.786 | 0.963 | 0.883 | 0.35 |
 | MNIST | Uncond | 21.559 | 
+| S3C | Uncond | 96.363 |
 
 ## CelebA
 ### VQVAE
