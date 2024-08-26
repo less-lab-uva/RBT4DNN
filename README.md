@@ -18,9 +18,19 @@ This repository is for the update of the project "RBT4DNN"
 
 ![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_vqvae_reconstructed_samples.png)
 
+***Input image (first row) and reconstructed image(second row) for latent space 3X8X8***
+
+![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_vqvae_192.png)
+
 ### Unconditional LDM
 
+***Unconditional LDM with latent space 3X32X32***
+
 ![Image of unconditional ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_unconditional_samples.png)
+
+***Unconditional LDM with latent space 3X8X8***
+
+![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_uncond_192.png)
 
 ### Text-conditioned LDM
 ***Texts:***
