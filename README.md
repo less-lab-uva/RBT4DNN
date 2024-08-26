@@ -1,5 +1,7 @@
 # RBT4DNN
 This repository is for the update of the project "RBT4DNN"
+
+Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r9Vw-cETf4AvpMhczbUgvMim88Z-tj9eKhTqqIEjk/edit?usp=sharing)
 ## Metric Score 
 
 | Dataset | Model | cFID | Density | Coverage | Precision | Recall |
