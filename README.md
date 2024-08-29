@@ -17,11 +17,19 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 
 ![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_vqvae_192.png)
 
+***Input image (first row) and reconstructed image(second row) for latent space 3X16X16***
+
+![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebhq_vqvae_768.png)
+
 ### Unconditional LDM
 
 ***Unconditional LDM with latent space 3X8X8***
 
 ![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_uncond_192.png)
+
+***Unconditional LDM with latent space 3X16X16***
+
+![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_uncond_768.png)
 
 ### Text-conditioned LDM
 
