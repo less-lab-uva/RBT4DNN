@@ -6,19 +6,12 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 
 | Dataset | Model | cFID | Density | Coverage | Precision | Recall |
 | ------ | ----- | ----- | ------ | -------- | ------- | ------- |
-| CelebAHQ | Uncond | 70.086 | 1.786 | 0.963 | 0.883 | 0.35 |
-| MNIST | Uncond | 21.559 | 
-| S3C | Uncond | 96.363 |
+| CelebAHQ | Uncond | 
+| MNIST | Uncond | 
+| S3C | Uncond |
 
 ## CelebA
 ### VQVAE
-***Input image***
-
-![Input sample](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_vqvae_input_samples.png)
-
-***Reconstructed image***
-
-![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_vqvae_reconstructed_samples.png)
 
 ***Input image (first row) and reconstructed image(second row) for latent space 3X8X8***
 
@@ -26,24 +19,11 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 
 ### Unconditional LDM
 
-***Unconditional LDM with latent space 3X32X32***
-
-![Image of unconditional ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_unconditional_samples.png)
-
 ***Unconditional LDM with latent space 3X8X8***
 
 ![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_uncond_192.png)
 
 ### Text-conditioned LDM
-***Texts:***
-- Image of a man wearing sunglass (first row of the image grid)
-- Image of a woman with blonde hair (second row of the image grid)
-
-![Image of text conditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_text_cond.png)
-
-Updated results:
-
-![New Image of text conditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebhq.png)
 
 ## S3C
 
