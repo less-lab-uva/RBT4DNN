@@ -6,9 +6,10 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 
 | Dataset | Model | cFID | Density | Coverage | Precision | Recall |
 | ------ | ----- | ----- | ------ | -------- | ------- | ------- |
-| CelebAHQ | Uncond | 
-| MNIST | Uncond | 
-| S3C | Uncond |
+| CelebAHQ | Uncond dim 192 | 69.136 | 1.82 | 0.996 | 0.86 | 0.344 |
+| CelebAHQ | Uncond dim 768 | 63.793 | 1.84 | 0.96 | 0.884 | 0.372 |
+| MNIST | Uncond | 21.559 |
+| S3C | Uncond | 96.363 |
 
 ## CelebA
 ### VQVAE
