@@ -34,6 +34,11 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 
 ### Text-conditioned LDM
 
+## SGSM
+### VQVAE
+***Input image (first row) and reconstructed image(second row) for latent space 3X8X28***
+
+![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/sgsm_vqvae.png)
 ## S3C
 
 ### Unconditional
