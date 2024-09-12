@@ -15,6 +15,9 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 ### Flux-LoRA
 ***Prompt: An attractive young female with arched eyebrows, bags under eyes, big lips, small nose, brown hair, bushy eyebrows, heavy makeup, high cheekbones, mouth slightly open, no beard, pointy nose, smiling, wavy hair, wearing lipstick.***
 ![flux-lora](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_flux.png)
+
+***Prompt: An old bald man wearing sunglasses.***
+![flux-lora](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_flux_1.png)
 ### VQVAE
 
 ***Input image (first row) and reconstructed image(second row) for latent space 3X8X8***
