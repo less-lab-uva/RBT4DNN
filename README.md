@@ -12,6 +12,8 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 | S3C | Uncond | 96.363 |
 
 ## CelebA
+### Flux-LoRA
+![flux-lora](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_flux.png)
 ### VQVAE
 
 ***Input image (first row) and reconstructed image(second row) for latent space 3X8X8***
