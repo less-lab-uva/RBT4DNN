@@ -12,6 +12,26 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 | S3C | Uncond | 96.363 |
 
 ## CelebA
+### Diversity 
+R1: Gender (Male), R2: Young, R3: Wearing eyeglasses. 
+
+All results are given in percentage of matches
+r1-genS: generated images for R1 by Stable diffusion model
+r1-genF: generated images for R1 by Flux-LoRA
+
+| | R1 | R2 | R3|
+| --- | ----- | ----- | ----- |
+| **r1-ori** | 90.93 | 60.42 | 10.48 |
+| **r1-genS** | 81 | 78 | 1|
+| **r1-genF**| 65 | 52 | 8 |
+| **r2-ori** | 28.3 | 96.77 | 2.14 |
+| **r2-genS** | 7 | 97 | 0 |
+| **r2-genF**| 56 | 64| 7 |
+| **r3-ori** | 75.42 | 43.49 | 87.4 |
+| **r3-genS** | 55 | 61 | 82 |
+| **r3-genF**| 50 | 65 | 36 |
+
+
 ### Flux-LoRA
 ***Prompt: An attractive young female with arched eyebrows, bags under eyes, big lips, small nose, brown hair, bushy eyebrows, heavy makeup, high cheekbones, mouth slightly open, no beard, pointy nose, smiling, wavy hair, wearing lipstick.***
 ![flux-lora](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_flux.png)
@@ -45,18 +65,6 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 ***Input image (first row) and reconstructed image(second row) for latent space 3X8X28***
 
 ![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/sgsm_vqvae.png)
-## S3C
-
-### Unconditional
-
-![Image of unconditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/s3c_uncond.png)
-
-### Text-conditioned LDM
-***Texts:***
-- A car is 4 to 7 meters away, in front, to the right of, and in the opposing lane.  A car is 7 to 10 meters away, in front, slightly to the right of, and in the opposing lane. (first row of the image grid)
-- Two cars are 7 to 10 meters away, in front, slightly to the right of, and in the opposing lane. (second row of the image grid)
-
-![Image of text conditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/s3c.png)
 
 ## MNIST
 ### VQVAE
