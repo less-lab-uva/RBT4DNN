@@ -17,6 +17,8 @@ R1: Gender (Male), R2: Young, R3: Wearing eyeglasses.
 
 All results are given in percentage of matches
 
+r1-ori: Images from dataset satisfying R1
+
 r1-genS: generated images for R1 by Stable diffusion model
 
 r1-genF: generated images for R1 by Flux-LoRA
