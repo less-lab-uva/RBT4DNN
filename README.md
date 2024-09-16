@@ -16,7 +16,9 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 R1: Gender (Male), R2: Young, R3: Wearing eyeglasses. 
 
 All results are given in percentage of matches
+
 r1-genS: generated images for R1 by Stable diffusion model
+
 r1-genF: generated images for R1 by Flux-LoRA
 
 | | R1 | R2 | R3|
