@@ -7,7 +7,7 @@ Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r
 
 Models: (arranged according to column respectively. For example, first column of every image panel is generated from FLUX Dev model. Short description and links of the models can be found here: [RBT4DNN](https://docs.google.com/document/d/1l_r9Vw-cETf4AvpMhczbUgvMim88Z-tj9eKhTqqIEjk/edit?usp=sharing)) 
 
-FLUX Dev, Stable Diffusion XL Base 1.0, Stable Diffusion 3 Medium, Stable Cascade
+FLUX Dev, Stable Diffusion XL Base 1.0, Stable Diffusion 3 Medium, Stable Cascade, Image from original dataset (only for CelebA+HQ)
 
 **Prompt:** A man with gray hair
 ![celeba](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/a_man_with_gray_hair.png)
