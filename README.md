@@ -2,6 +2,22 @@
 This repository is for the update of the project "RBT4DNN"
 
 Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r9Vw-cETf4AvpMhczbUgvMim88Z-tj9eKhTqqIEjk/edit?usp=sharing)
+
+## Baseline Models for Comparison:
+
+Models: (arranged according to column respectively. For example, first column of every image panel is generated from FLUX Dev model. Short description and links of the models can be found here: [RBT4DNN](https://docs.google.com/document/d/1l_r9Vw-cETf4AvpMhczbUgvMim88Z-tj9eKhTqqIEjk/edit?usp=sharing)) 
+
+FLUX Dev, Stable Diffusion XL Base 1.0, Stable Diffusion 3 Medium, Stable Cascade
+
+**Prompt:** A man with gray hair
+![celeba](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/a_man_with_gray_hair.png)
+
+**Prompt:** Image of digit 1
+![mnist](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/Image_of_digit_1.png)
+
+**Prompt:** A vehicle in the lane to the left and within 7 meters
+![sgsm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/A_vehicle_in_the_lane_to_the_left_and_within_7_meters.png)
+
 ## Metric Score 
 
 | Dataset | Model | cFID | Density | Coverage | Precision | Recall |
