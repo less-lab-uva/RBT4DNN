@@ -18,38 +18,10 @@ FLUX Dev, Stable Diffusion XL Base 1.0, Stable Diffusion 3 Medium, Stable Cascad
 **Prompt:** A vehicle in the lane to the left and within 7 meters
 ![sgsm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/A_vehicle_in_the_lane_to_the_left_and_within_7_meters.png)
 
-## Metric Score 
 
-| Dataset | Model | cFID | Density | Coverage | Precision | Recall |
-| ------ | ----- | ----- | ------ | -------- | ------- | ------- |
-| CelebAHQ | Uncond dim 192 | 49.485 | 1.82 | 0.996 | 0.86 | 0.344 |
-| CelebAHQ | Uncond dim 768 | 39.6 | 1.84 | 0.96 | 0.884 | 0.372 |
-| MNIST | Uncond | 21.559 | 0.765 | 0.908 | 0.848 | 0.86 |
-| S3C | Uncond | 96.363 |
 
 ## CelebA
-### Diversity 
-R1: Gender (Male), R2: Young, R3: Wearing eyeglasses. 
 
-All results are given in percentage of matches
-
-r1-ori: Images from dataset satisfying R1
-
-r1-genS: generated images for R1 by Stable diffusion model
-
-r1-genF: generated images for R1 by Flux-LoRA
-
-| | R1 | R2 | R3|
-| --- | ----- | ----- | ----- |
-| **r1-ori** | 90.93 | 60.42 | 10.48 |
-| **r1-genS** | 81 | 78 | 1|
-| **r1-genF**| 65 | 52 | 8 |
-| **r2-ori** | 28.3 | 96.77 | 2.14 |
-| **r2-genS** | 7 | 97 | 0 |
-| **r2-genF**| 56 | 64| 7 |
-| **r3-ori** | 75.42 | 43.49 | 87.4 |
-| **r3-genS** | 55 | 61 | 82 |
-| **r3-genF**| 50 | 65 | 36 |
 
 
 ### Flux-LoRA
@@ -58,55 +30,30 @@ r1-genF: generated images for R1 by Flux-LoRA
 
 ***Prompt: An old bald man wearing sunglasses.***
 ![flux-lora](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_flux_1.png)
-### VQVAE
-
-***Input image (first row) and reconstructed image(second row) for latent space 3X8X8***
-
-![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_vqvae_192.png)
-
-***Input image (first row) and reconstructed image(second row) for latent space 3X16X16***
-
-![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebhq_vqvae_768.png)
-
-### Unconditional LDM
-
-***Unconditional LDM with latent space 3X8X8***
-
-![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_uncond_192.png)
-
-***Unconditional LDM with latent space 3X16X16***
-
-![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celebahq_uncond_768.png)
-
-### Text-conditioned LDM
-
-## SGSM
-### VQVAE
-***Input image (first row) and reconstructed image(second row) for latent space 3X8X28***
-
-![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/sgsm_vqvae.png)
 
 ## MNIST
-### VQVAE
-***Input image***
+### Flux-LoRA (First row: images from dataset. Second row: images from Flux-LoRA model finetuned on the requirement)
 
-![Input sample](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_vqvae_input_samples.png)
+***R1: MNIST hand written digit in white on black background. The digit is a 4 and has very long length.***
 
-***Reconstructed image***
+![mnist-r1](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_r1.png)
 
-![reconstructed](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_vqvaereconstructed_samples.png)
+***R2: MNIST hand written digit in white on black background. The digit is a 3 and is very thick.***
 
-### Unconditional LDM
+![mnist-r2](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_r2.png)
 
-![Image of unconditional ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_unconditional_samples.png)
+***R3: MNIST hand written digit in white on black background. The digit is a 7 and is very thick.***
 
-### Text-conditioned LDM
-***Texts:***
-- Digit 3 with a small area, long length, very thin, right leaned, narrow and high height. (first row of the image grid)
-- Digit 0 with a large area, long length, thin, right leaned, wide and high height. (second row of the image grid)
-- Digit with extremely right leaned. (third row of the image grid)
-- Thick digit. (fourth row of the image grid)
-  
-![Image of text conditioned ldm](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_text_cond.png)
+![mnist-r3](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_r3.png)
 
- 
+***R4: MNIST hand written digit in white on black background. The digit is a 9 and is very left leaning.***
+
+![mnist-r4](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_r4.png)
+
+***R5: MNIST hand written digit in white on black background. The digit is 6 and is very right leaning.***
+
+![mnist-r5](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_r5.png)
+
+***R6: MNIST hand written digit in white on black background. The digit is a 0 and has very low height.***
+
+![mnist-r6](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_r6.png)
