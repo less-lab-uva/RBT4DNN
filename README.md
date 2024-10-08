@@ -22,16 +22,44 @@ FLUX Dev, Stable Diffusion XL Base 1.0, Stable Diffusion 3 Medium, Stable Cascad
 
 ## CelebA
 
+### Flux-LoRA (First row: images from dataset. Second row: images from Flux-LoRA model finetuned on the requirement)
+
+***R1: CelebAHQ close headshot of a person. The person is male and has blond hair.***
+
+![celeba-r1](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_r1.png)
 
 
-### Flux-LoRA
-***Prompt: An attractive young female with arched eyebrows, bags under eyes, big lips, small nose, brown hair, bushy eyebrows, heavy makeup, high cheekbones, mouth slightly open, no beard, pointy nose, smiling, wavy hair, wearing lipstick.***
-![flux-lora](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_flux.png)
+***R2: CelebAHQ headshot of a person. The person has brown hair and is wearing eyeglasses.***
 
-***Prompt: An old bald man wearing sunglasses.***
-![flux-lora](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_flux_1.png)
+![celeba-r2](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_r2.png)
+
+
+***R3: CelebAHQ headshot of a person. The person is male and wearing earrings.***
+
+![celeba-r3](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_r3.png)
+
+
+***R4: CelebAHQ headshot of a person. The person has mustache and is wearing hat.***
+
+![celeba-r4](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_r4.png)
+
+
+***R5: CelebAHQ close headshot of a person. The person is bald and wearing necktie.***
+
+![celeba-r5](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_r5.png)
+
+
+***R6: CelebAHQ close headshot of a person. The person is young and bald.***
+
+![celeba-r6](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/celeba_r6.png)
+
 
 ## MNIST
+
+### Metrics
+
+![mnist-metrics](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/mnist_metrics.png)
+
 ### Flux-LoRA (First row: images from dataset. Second row: images from Flux-LoRA model finetuned on the requirement)
 
 ***R1: MNIST hand written digit in white on black background. The digit is a 4 and has very long length.***
