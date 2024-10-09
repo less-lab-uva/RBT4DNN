@@ -3,6 +3,9 @@ This repository is for the update of the project "RBT4DNN"
 
 Work progress google doc link: [RBT4DNN](https://docs.google.com/document/d/1l_r9Vw-cETf4AvpMhczbUgvMim88Z-tj9eKhTqqIEjk/edit?usp=sharing)
 
+## RQ1:
+![rq1](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Results/rq1_plot.png)
+
 ## Baseline Models for Comparison:
 
 Models: (arranged according to column respectively. For example, first column of every image panel is generated from FLUX Dev model. Short description and links of the models can be found here: [RBT4DNN](https://docs.google.com/document/d/1l_r9Vw-cETf4AvpMhczbUgvMim88Z-tj9eKhTqqIEjk/edit?usp=sharing)) 
