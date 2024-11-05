@@ -1,0 +1,250 @@
+calculating JS metric for r1
+calculating for f1
+for gtc, c1 = 0.972972972972973, c0 = 0.02702702702702703
+for lora, c1 = 0.762, c0 = 0.238
+for flux, c1 = 0.588, c0 = 0.412
+calculating for f2
+for gtc, c1 = 0.40540540540540543, c0 = 0.5945945945945946
+for lora, c1 = 0.27, c0 = 0.73
+for flux, c1 = 0.004, c0 = 0.996
+calculating for f3a
+for gtc, c1 = 0.08558558558558559, c0 = 0.9144144144144144
+for lora, c1 = 0.354, c0 = 0.646
+for flux, c1 = 0.182, c0 = 0.818
+calculating for f4a
+for gtc, c1 = 0.21621621621621623, c0 = 0.7837837837837838
+for lora, c1 = 0.058, c0 = 0.942
+for flux, c1 = 0.229, c0 = 0.771
+calculating for f4b
+for gtc, c1 = 0.9324324324324325, c0 = 0.06756756756756757
+for lora, c1 = 0.987, c0 = 0.013
+for flux, c1 = 0.623, c0 = 0.377
+calculating for f5a
+for gtc, c1 = 0.7747747747747747, c0 = 0.22522522522522523
+for lora, c1 = 0.949, c0 = 0.051
+for flux, c1 = 0.743, c0 = 0.257
+calculating for f6
+for gtc, c1 = 0.0945945945945946, c0 = 0.9054054054054054
+for lora, c1 = 0.0, c0 = 1.0
+for flux, c1 = 0.187, c0 = 0.813
+calculating for f7
+for gtc, c1 = 0.05405405405405406, c0 = 0.9459459459459459
+for lora, c1 = 0.007, c0 = 0.993
+for flux, c1 = 0.166, c0 = 0.834
+JS distance between real and lora image: 0.04284306993291878, between real and flux image:0.07089956329853238
+
+
+calculating JS metric for r2
+calculating for f1
+for gtc, c1 = 0.0420284135753749, c0 = 0.9579715864246251
+for lora, c1 = 0.001, c0 = 0.999
+for flux, c1 = 0.606, c0 = 0.394
+calculating for f2
+for gtc, c1 = 0.9855958958168903, c0 = 0.014404104183109707
+for lora, c1 = 0.85, c0 = 0.15
+for flux, c1 = 0.011, c0 = 0.989
+calculating for f3a
+for gtc, c1 = 0.026243093922651933, c0 = 0.9737569060773481
+for lora, c1 = 0.195, c0 = 0.805
+for flux, c1 = 0.007, c0 = 0.993
+calculating for f4a
+for gtc, c1 = 0.39187056037884765, c0 = 0.6081294396211523
+for lora, c1 = 0.225, c0 = 0.775
+for flux, c1 = 0.163, c0 = 0.837
+calculating for f4b
+for gtc, c1 = 0.9844119968429361, c0 = 0.015588003157063931
+for lora, c1 = 0.842, c0 = 0.158
+for flux, c1 = 0.141, c0 = 0.859
+calculating for f5a
+for gtc, c1 = 0.5951065509076559, c0 = 0.4048934490923441
+for lora, c1 = 0.793, c0 = 0.207
+for flux, c1 = 0.663, c0 = 0.337
+calculating for f6
+for gtc, c1 = 0.038279400157853194, c0 = 0.9617205998421468
+for lora, c1 = 0.001, c0 = 0.999
+for flux, c1 = 0.189, c0 = 0.811
+calculating for f7
+for gtc, c1 = 0.10378847671665352, c0 = 0.8962115232833465
+for lora, c1 = 0.008, c0 = 0.992
+for flux, c1 = 0.215, c0 = 0.785
+JS distance between real and lora image: 0.036393237663708604, between real and flux image:0.2444344707782583
+
+
+calculating JS metric for r3
+calculating for f1
+for gtc, c1 = 0.0681198910081744, c0 = 0.9318801089918256
+for lora, c1 = 0.004, c0 = 0.996
+for flux, c1 = 0.666, c0 = 0.334
+calculating for f2
+for gtc, c1 = 0.006811989100817439, c0 = 0.9931880108991825
+for lora, c1 = 0.154, c0 = 0.846
+for flux, c1 = 0.0, c0 = 1.0
+calculating for f3a
+for gtc, c1 = 0.9918256130790191, c0 = 0.008174386920980926
+for lora, c1 = 0.786, c0 = 0.214
+for flux, c1 = 0.027, c0 = 0.973
+calculating for f4a
+for gtc, c1 = 0.38283378746594005, c0 = 0.6171662125340599
+for lora, c1 = 0.139, c0 = 0.861
+for flux, c1 = 0.542, c0 = 0.458
+calculating for f4b
+for gtc, c1 = 0.8610354223433242, c0 = 0.13896457765667575
+for lora, c1 = 0.599, c0 = 0.401
+for flux, c1 = 0.144, c0 = 0.856
+calculating for f5a
+for gtc, c1 = 0.6212534059945504, c0 = 0.3787465940054496
+for lora, c1 = 0.872, c0 = 0.128
+for flux, c1 = 0.26, c0 = 0.74
+calculating for f6
+for gtc, c1 = 0.01907356948228883, c0 = 0.9809264305177112
+for lora, c1 = 0.005, c0 = 0.995
+for flux, c1 = 0.081, c0 = 0.919
+calculating for f7
+for gtc, c1 = 0.05722070844686648, c0 = 0.9427792915531336
+for lora, c1 = 0.015, c0 = 0.985
+for flux, c1 = 0.043, c0 = 0.957
+JS distance between real and lora image: 0.04771642025437382, between real and flux image:0.2166820083353544
+
+
+calculating JS metric for r4
+calculating for f1
+for gtc, c1 = 0.04440894568690096, c0 = 0.955591054313099
+for lora, c1 = 0.002, c0 = 0.998
+for flux, c1 = 0.487, c0 = 0.513
+calculating for f2
+for gtc, c1 = 0.612779552715655, c0 = 0.38722044728434507
+for lora, c1 = 0.481, c0 = 0.519
+for flux, c1 = 0.007, c0 = 0.993
+calculating for f3a
+for gtc, c1 = 0.10351437699680512, c0 = 0.8964856230031949
+for lora, c1 = 0.252, c0 = 0.748
+for flux, c1 = 0.186, c0 = 0.814
+calculating for f4a
+for gtc, c1 = 1.0, c0 = 0.0
+for lora, c1 = 0.927, c0 = 0.073
+for flux, c1 = 0.38, c0 = 0.62
+calculating for f4b
+for gtc, c1 = 0.981150159744409, c0 = 0.018849840255591055
+for lora, c1 = 0.917, c0 = 0.083
+for flux, c1 = 0.632, c0 = 0.368
+calculating for f5a
+for gtc, c1 = 0.0003194888178913738, c0 = 0.9996805111821087
+for lora, c1 = 0.117, c0 = 0.883
+for flux, c1 = 0.709, c0 = 0.291
+calculating for f6
+for gtc, c1 = 0.03450479233226837, c0 = 0.9654952076677317
+for lora, c1 = 0.002, c0 = 0.998
+for flux, c1 = 0.208, c0 = 0.792
+calculating for f7
+for gtc, c1 = 0.0003194888178913738, c0 = 0.9996805111821087
+for lora, c1 = 0.0, c0 = 1.0
+for flux, c1 = 0.098, c0 = 0.902
+JS distance between real and lora image: 0.02311013895776639, between real and flux image:0.22287149320191288
+
+
+calculating JS metric for r5
+calculating for f1
+for gtc, c1 = 0.07574340751823452, c0 = 0.9242565924817655
+for lora, c1 = 0.001, c0 = 0.999
+for flux, c1 = 0.507, c0 = 0.493
+calculating for f2
+for gtc, c1 = 0.5485318870394614, c0 = 0.4514681129605386
+for lora, c1 = 0.347, c0 = 0.653
+for flux, c1 = 0.003, c0 = 0.997
+calculating for f3a
+for gtc, c1 = 0.11707499532448101, c0 = 0.8829250046755189
+for lora, c1 = 0.395, c0 = 0.605
+for flux, c1 = 0.182, c0 = 0.818
+calculating for f4a
+for gtc, c1 = 0.0, c0 = 1.0
+for lora, c1 = 0.006, c0 = 0.994
+for flux, c1 = 0.34, c0 = 0.66
+calculating for f4b
+for gtc, c1 = 0.9713858238264448, c0 = 0.028614176173555265
+for lora, c1 = 0.743, c0 = 0.257
+for flux, c1 = 0.597, c0 = 0.403
+calculating for f5a
+for gtc, c1 = 0.9998129792406957, c0 = 0.0001870207593042828
+for lora, c1 = 0.995, c0 = 0.005
+for flux, c1 = 0.722, c0 = 0.278
+calculating for f6
+for gtc, c1 = 0.040209463250420796, c0 = 0.9597905367495791
+for lora, c1 = 0.003, c0 = 0.997
+for flux, c1 = 0.165, c0 = 0.835
+calculating for f7
+for gtc, c1 = 0.1075369365999626, c0 = 0.8924630634000374
+for lora, c1 = 0.008, c0 = 0.992
+for flux, c1 = 0.145, c0 = 0.855
+JS distance between real and lora image: 0.03577026456973442, between real and flux image:0.1347595948395793
+
+
+calculating JS metric for r6
+calculating for f1
+for gtc, c1 = 0.08843537414965986, c0 = 0.9115646258503401
+for lora, c1 = 0.013, c0 = 0.987
+for flux, c1 = 0.577, c0 = 0.423
+calculating for f2
+for gtc, c1 = 0.564625850340136, c0 = 0.43537414965986393
+for lora, c1 = 0.289, c0 = 0.711
+for flux, c1 = 0.007, c0 = 0.993
+calculating for f3a
+for gtc, c1 = 0.10204081632653061, c0 = 0.8979591836734694
+for lora, c1 = 0.166, c0 = 0.834
+for flux, c1 = 0.185, c0 = 0.815
+calculating for f4a
+for gtc, c1 = 0.4013605442176871, c0 = 0.5986394557823129
+for lora, c1 = 0.139, c0 = 0.861
+for flux, c1 = 0.282, c0 = 0.718
+calculating for f4b
+for gtc, c1 = 0.9115646258503401, c0 = 0.08843537414965986
+for lora, c1 = 0.663, c0 = 0.337
+for flux, c1 = 0.566, c0 = 0.434
+calculating for f5a
+for gtc, c1 = 0.5918367346938775, c0 = 0.40816326530612246
+for lora, c1 = 0.87, c0 = 0.13
+for flux, c1 = 0.631, c0 = 0.369
+calculating for f6
+for gtc, c1 = 0.9795918367346939, c0 = 0.02040816326530612
+for lora, c1 = 0.945, c0 = 0.055
+for flux, c1 = 0.05, c0 = 0.95
+calculating for f7
+for gtc, c1 = 0.061224489795918366, c0 = 0.9387755102040817
+for lora, c1 = 0.04, c0 = 0.96
+for flux, c1 = 0.145, c0 = 0.855
+JS distance between real and lora image: 0.037957903926915115, between real and flux image:0.18629214529233723
+
+
+calculating JS metric for r7
+calculating for f1
+for gtc, c1 = 0.04788213627992634, c0 = 0.9521178637200737
+for lora, c1 = 0.001, c0 = 0.999
+for flux, c1 = 0.537, c0 = 0.463
+calculating for f2
+for gtc, c1 = 0.9410681399631676, c0 = 0.058931860036832415
+for lora, c1 = 0.931, c0 = 0.069
+for flux, c1 = 0.002, c0 = 0.998
+calculating for f3a
+for gtc, c1 = 0.04788213627992634, c0 = 0.9521178637200737
+for lora, c1 = 0.117, c0 = 0.883
+for flux, c1 = 0.155, c0 = 0.845
+calculating for f4a
+for gtc, c1 = 0.0, c0 = 1.0
+for lora, c1 = 0.024, c0 = 0.976
+for flux, c1 = 0.298, c0 = 0.702
+calculating for f4b
+for gtc, c1 = 0.990791896869245, c0 = 0.009208103130755065
+for lora, c1 = 0.954, c0 = 0.046
+for flux, c1 = 0.548, c0 = 0.452
+calculating for f5a
+for gtc, c1 = 1.0, c0 = 0.0
+for lora, c1 = 0.884, c0 = 0.116
+for flux, c1 = 0.65, c0 = 0.35
+calculating for f6
+for gtc, c1 = 0.0847145488029466, c0 = 0.9152854511970534
+for lora, c1 = 0.091, c0 = 0.909
+for flux, c1 = 0.06, c0 = 0.94
+calculating for f7
+for gtc, c1 = 0.996316758747698, c0 = 0.003683241252302026
+for lora, c1 = 0.83, c0 = 0.17
+for flux, c1 = 0.146, c0 = 0.854
+JS distance between real and lora image: 0.024434193480367336, between real and flux image:0.2960897380805126
