@@ -129,7 +129,7 @@ def sgsm(req):
         os.mkdir(im_path)
     img_size = [912, 256]
     return weight_path, prompt[req], im_path, img_size
-def sample_images(req, pipe, dataset, num_sample, num_images_per_epoch, im_dir= 'sample_gen',isSingleLora = False, isReqDataOnly = False):
+def sample_images(req, pipe, dataset, num_sample, num_images_per_epoch, isSingleLora = False, isReqDataOnly = False):
 
     #Load the LoRA adapter with PEFT backend
     if args.isSingleLora:
@@ -151,8 +151,6 @@ def sample_images(req, pipe, dataset, num_sample, num_images_per_epoch, im_dir= 
             weight_path, prompt, im_path, img_size = sgsm(req)
             width = img_size[0]
             height = img_size[1]
-
-    im_path = os.path.join(im_path,im_dir)
     
     if not os.path.exists(im_path):
         os.mkdir(im_path)
@@ -227,7 +225,6 @@ if __name__=='__main__':
     parser.add_argument('--dataset', default='mnist', type=str)
     parser.add_argument('--isSingleLora', default=False, type=bool)
     parser.add_argument('--isReqDataOnly', default=False, type=bool)
-    parser.add_argument('--im_dir', default= 'sample_gen', type = str)
     parser.add_argument('--num_samples', default = 1000, type = int)
     parser.add_argument('--num_samples_per_epoch', default = 100, type = int)
     parser.add_argument('--req', nargs='+', default = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6'])

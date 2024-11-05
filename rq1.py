@@ -10,11 +10,9 @@ import json
 from torch.utils.data import DataLoader
 from diffusers import FluxPipeline
 
-from rq1.train_classifier import ResnetModel, CustomDataset
-from rq1.sample_from_lora import sample_images
+from train_classifier import ResnetModel, CustomDataset
 from PIL import Image
 from torchvision import transforms
-from torchvision.utils import save_image
 
 
 def find_r_data(test_df, feature1, feature2 = None):
@@ -157,7 +155,7 @@ def mnist(req, flag = True, turn = None):
         end = turn * 100 + 100
         im_names = [f'{i}.png' for i in range(start, end)]
 
-        im_path = f'output/flux_lora_mnist_{req}/sample_gen'
+        im_path = 'data/images_from_loras/M' + req.split('r')[1]
         gen_dataset = CustomDataset(im_names = im_names, label = None, transform = transform, 
                     im_path = im_path, feature = None, im_channel = 1)              
         gen_dataloader = DataLoader(gen_dataset,
@@ -219,7 +217,7 @@ def celeba(req, flag = True, turn = None):
         start = turn * 100
         end = turn * 100 + 100
         im_names = [f'{i}.png' for i in range(start, end)]
-        im_path = f'output/flux_lora_celeba_{req}/sample_gen'
+        im_path = 'data/images_from_loras/C' + req.split('r')[1]
         gen_dataset = CustomDataset(im_names = im_names, label = None, transform = transform, 
                     im_path = im_path, feature = None, im_channel = 1)                
         
@@ -301,9 +299,14 @@ def main(args):
     print(f'Success rate over test dataset: {test_score}')
     print(f'Success rate over generated images:')
     print(gen_score)
+    scores = {}
+    scores['test'] = test_score
+    scores['gen'] = gen_score
     print(f'\n\nmismatch from test set: {test_mismatch}')
-    with open(f"output/rq1_{args.dataset}.json", "w") as f:
+    with open(f"results/rq1_{args.dataset}_fulldata.json", "w") as f:
         json.dump(results, f, indent=4)
+    with open(f"results/rq1_{args.dataset}.json", "w") as f:
+        json.dump(scores, f, indent=4)
 if __name__=='__main__':
     parser = argparse.ArgumentParser(description='Arguments for rq1')
     parser.add_argument('--dataset', default='celeba', type=str)

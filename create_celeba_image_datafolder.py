@@ -12,7 +12,7 @@ from torch.utils.data.dataset import Dataset
 import pandas as pd
 
 '''
-This script creats requirement based image and text folder for LoRA training for CelebA-HQ dataset
+This script creates requirement based image and text folder for LoRA training for CelebA-HQ dataset
 '''
 
 

@@ -296,7 +296,7 @@ def celeba_classifier(req, model_type = 'resnet', vratio = 0.1):
     batch_size = 8
     learning_rate = 1e-3
     epochs = 50
-    save_location = f'output/celeba_binary_classifier_1024_v3_{req}'
+    save_location = f'output/celeba_binary_classifier_1024_{req}'
     model_name = f'{feature_name[req].lower()}.pth'
     num_of_classes = 2
 
@@ -364,10 +364,7 @@ def mnist_classifier(req, model_type = 'resnet', vratio = 0.1):
         '7' : 'r3',
         '9' : 'r4',
         '6' : 'r5',
-        '0' : 'r6',
-        'f1': 'Very_High_Height',
-        'f2': 'Very_Thin',
-        'f3': 'Upright'
+        '0' : 'r6'
     }
     im_size = 64
     batch_size = 32
@@ -431,60 +428,20 @@ def mnist_classifier(req, model_type = 'resnet', vratio = 0.1):
     train(train_loader, val_loader, test_loader, learning_rate, epochs, save_location, model, model_name, num_of_classes)
 
 
-def mnist_multiclassifier():
-    im_size = 64
-    valid_size = 0.9
-    shuffle = True
-    random_seed = 1111
-    num_of_classes = 10
-    batch_size = 128
-    learning_rate = 1e-3
-    epochs = 100
-    transform = transforms.Compose([
-                                # expand chennel from 1 to 3 to fit 
-                                # ResNet pretrained model
-                                transforms.ToTensor(),
-                                transforms.Lambda(lambda x: x.repeat(3, 1, 1)),
-                                transforms.Resize(im_size, interpolation=transforms.InterpolationMode.BICUBIC),
-                                transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-                                ]) 
-    
-    
-    im_path = 'data/MNIST'
-    with open(os.path.join(im_path, 'label.txt'), 'r') as f:
-        labelfile = f.readlines()
-    mnist_train = CustomDataset(split = 'train', pos_im_path= im_path, 
-                                    neg_im_path = None, im_size = 64, 
-                                    labelfile = labelfile, split_ratio=0.9)
-    mnist_val = CustomDataset(split = 'val', pos_im_path= im_path, 
-                                    neg_im_path = None, im_size = 64, 
-                                    labelfile = labelfile, split_ratio=0.9)
-    
-    train_loader = torch.utils.data.DataLoader(mnist_train, 
-                    batch_size=batch_size, shuffle = True)
 
-    val_loader = torch.utils.data.DataLoader(mnist_val, 
-                    batch_size=batch_size, shuffle = True)
-    
-
-    save_location = f'output/mnist_digit_classifier'
-    model_name = 'mnist_digit_classifier.pth'
-
-    train(train_loader, val_loader, batch_size, 
-                learning_rate, epochs, save_location, model_name)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for classifier training')
-    parser.add_argument('--req', default='model_under_test', type=str)
+    parser.add_argument('--fet', default='model_under_test', type=str)
     parser.add_argument('--dataset', default='celeba', type=str)
     parser.add_argument('--classifier', default='binary', type=str)
     parser.add_argument('--model_type', default='resnet', type=str)
     parser.add_argument('--validratio', default=0.1, type=float)
     args = parser.parse_args()
     if args.dataset == 'celeba':
-        celeba_classifier(args.req, args.model_type, args.validratio)
+        celeba_classifier(args.fet, args.model_type, args.validratio)
     elif args.dataset == 'mnist':
         if args.classifier == 'binary':
-            mnist_classifier(args.req, args.model_type, args.validratio)
+            mnist_classifier(args.fet, args.model_type, args.validratio)
         elif args.classifier == 'multi':
             mnist_multiclassifier()

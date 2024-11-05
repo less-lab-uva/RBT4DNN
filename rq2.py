@@ -6,7 +6,7 @@ import pandas as pd
 from PIL import Image
 from tqdm import tqdm
 from torch.utils.data import Dataset
-from rq1.rq1 import find_r_data
+from rq1 import find_r_data
 from torchvision import transforms
 
 from torchmetrics.image.kid import KernelInceptionDistance

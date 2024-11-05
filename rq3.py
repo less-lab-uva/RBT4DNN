@@ -8,7 +8,7 @@ from torchvision import transforms
 from scipy.spatial import distance
 from scipy.stats import entropy
 from torch.utils.data import DataLoader
-from rq1.train_classifier import ResnetModel, CustomDataset
+from train_classifier import ResnetModel, CustomDataset
 
 
 def find_index(df, feature1, feature2 = None):
