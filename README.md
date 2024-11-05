@@ -53,7 +53,7 @@ To train a LoRA, follow the steps from here [LoRA](https://github.com/ostris/ai-
 
 ### Generate Images from Lora
 
-We provided 100 generated images from the per-requirement LoRA for each requirement of each dataset in [images_from_loras](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras). To produce more images, use the following code to generate images
+We provided 100 generated images from the per-requirement LoRA for each requirement of each dataset in [images_from_loras](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras). To produce more images, use the following code.
 
 <code>python sample_from_lora.py --dataset [dataset] --num_samples [num_of_samples_to_generate] --num_samples_per_epoch [num_of_samples_to_generate_at_once] --req [list_of_requirements]</code>
 
