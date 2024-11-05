@@ -1,5 +1,5 @@
 # RBT4DNN
-This repository contains the code and data for the framework "RBT4DNN"
+This repository contains the code and data for the framework "RBT4DNN".
 
 ## Requirements
 ![requirements](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/requirements.png)
