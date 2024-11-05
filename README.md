@@ -23,7 +23,9 @@ The results of our experiments can be found in [results](https://github.com/nusr
 
 ## Usage
 
-To reproduce the results, follow the following steps
+To reproduce the results, First create a python virtual environment (our used version is python 3.11.6). Then, activate the environment and inside the environment, run the following command:
+
+<code>pip install -r requirements.txt</code>
 
 ### Dataset Preparation
 
