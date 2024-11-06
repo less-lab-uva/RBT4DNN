@@ -8,8 +8,8 @@ import torch
 for req in range(1,7):
     if os.path.exists(f"mnist_r{req}_faults.txt"):
         os.remove(f"mnist_r{req}_faults.txt")
-    if os.path.exists(f"mnist_r{req}_accuracy.txt"):
-        os.remove(f"mnist_r{req}_accuracy.txt")
+    if os.path.exists(f"mnist_r{req}_passrate.txt"):
+        os.remove(f"mnist_r{req}_passrate.txt")
     
 target_labels = [2,3,7,9,6,0]
 for req in range(1, 7):
