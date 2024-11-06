@@ -67,6 +67,8 @@ Use the following code to train the glossary term classifier for a glossary term
 
 <code>python train_classifier.py --fet [glossary_term] --dataset [dataset]</code>
 
+The pretrained models used in the paper can be found here [trained models](https://zenodo.org/records/14047510)
+
 ### Run RQ Studies
 
 To Produce the RQ results, run the following commands
