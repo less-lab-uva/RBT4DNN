@@ -6,10 +6,8 @@ import torch
 
 #Cleanup old logs
 for req in range(1,7):
-    if os.path.exists(f"mnist_r{req}_faults.txt"):
-        os.remove(f"mnist_r{req}_faults.txt")
-    if os.path.exists(f"mnist_r{req}_passrate.txt"):
-        os.remove(f"mnist_r{req}_passrate.txt")
+    if os.path.exists(f"results/mnist_r{req}_passrate.txt"):
+        os.remove(f"results/mnist_r{req}_passrate.txt")
     
 target_labels = [2,3,7,9,6,0]
 for req in range(1, 7):
@@ -32,15 +30,7 @@ for req in range(1, 7):
 
         predicted_label = [l.argmax(-1).item() for l in logits]
         fail_cases = [(it*1000+i, exp_label, p) for i, p in enumerate(predicted_label) if p != exp_label]
-
-        if len(fail_cases) > 0:
-            with open(f"mnist_r{req}_faults.txt", "a") as f:
-                result = f"Iteration {it} Faults : "
-                for fc in fail_cases:
-                    result = result + str(fc) + ","
-                f.write(result+"\n")
-                print(result)
                 
-        with open(f"mnist_r{req}_passrate.txt", "a") as f:
+        with open(f"results/mnist_r{req}_passrate.txt", "a") as f:
             f.write(f"Iteration {it} Pass Rate : "+str((1000-len(fail_cases))/1000)+"\n")
         print(f"Iteration {it} Pass Rate : "+str((1000-len(fail_cases))/1000))
