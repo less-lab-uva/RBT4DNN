@@ -21,10 +21,8 @@ transform = transforms.Compose([
                         
 #Cleanup old logs
 for req in range(1,7):
-    if os.path.exists(f"celeba_r{req}_faults.txt"):
-        os.remove(f"celeba_r{req}_faults.txt")
-    if os.path.exists(f"celeba_r{req}_passrate.txt"):
-        os.remove(f"celeba_r{req}_passrate.txt")
+    if os.path.exists(f"results/celeba_r{req}_passrate.txt"):
+        os.remove(f"results/celeba_r{req}_passrate.txt")
     
 for req in range(1, 7):
     img_dir = f"rq4/output/flux_lora_celeba_r{req}/rq4_samples"
@@ -36,7 +34,6 @@ for req in range(1, 7):
     for it in range(10):
         pass_cases = []
         fail_cases = []
-        pred = []
         with torch.no_grad():
             images = [Image.open(os.path.join(img_dir, f"{fname}.png")) for fname in range(it*1000, (it+1)*1000)]
             for index, img in enumerate(images):
@@ -45,21 +42,12 @@ for req in range(1, 7):
                 logits, probas = model(batch)
                 _, predicted_labels = torch.max(probas, 1)
                 p = (predicted_labels == 1)
-                pred.append(p.int().item())
                 if p.int().item() == 1:
                     pass_cases.append(it*1000+index)
                 else:
                     fail_cases.append(it*1000+index)
                 
-        if len(fail_cases) > 0:
-            with open(f"celeba_r{req}_faults.txt", "a") as f:
-                result = f"Iteration {it} Faults : "
-                for fc in fail_cases:
-                    result = result + str(fc) + ","
-                f.write(result+"\n")
-                print(result)
-                
-        with open(f"celeba_r{req}_passrate.txt", "a") as f:
+        with open(f"results/celeba_r{req}_passrate.txt", "a") as f:
             f.write(f"Iteration {it} Pass Rate : "+str((1000-len(fail_cases))/1000)+"\n")
         print(f"Iteration {it} Pass Rate : "+str((1000-len(fail_cases))/1000))
         
