@@ -11,6 +11,7 @@ The results of our experiments can be found in [results](https://github.com/nusr
 - rq1_<em>[dataset]</em>_fulldata.json: Contains the detail results for the dataset. For each requirement and for each image, this file contains the glossary term classifiers' decision with the image id.
 -  <em>[dataset]</em>_rq2.txt: Contains the KID score for each requirements of a dataset.
 -  <em>[dataset]</em>_rq3.txt: contains the detail JS divergence calculation for each requirements of a dataset.
+-  <em>[dataset]</em>_r<em>[req]</em>_passrate.txt: Contains passrates for 10 repetitions of the RQ4 study. req is 1-6 for the MNIST and CelebA-HQ datasets and 1-7 for the SGSM dataset. 
 
 ### RQ1:
 ![rq1](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/rq1.png)
@@ -83,4 +84,12 @@ For RQ2:
 For RQ3:
 
 <code>python rq3.py</code>
+
+For RQ4:
+
+<code>python rq4_gen_samples.py --req r<em>[1,6]</em> --dataset <em>[mnist,celeba]</em></code> 
+
+<code>python rq4_mnist_passrate.py</code>
+
+<code>python rq4_celeba_passrate.py</code>
 
