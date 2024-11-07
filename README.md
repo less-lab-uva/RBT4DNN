@@ -94,6 +94,8 @@ Copy pretrained SGSM loras from [trained models](https://zenodo.org/records/1404
 
 Follow the instructions in (https://comfyanonymous.github.io/ComfyUI_examples/flux/) and copy the flux models to the appropriate ComfyUI subdirectories.
 
+Copy driving_model.ckpt from [trained models](https://zenodo.org/records/14047510) to <em>output</em> directory.
+
 <code>python rq4_gen_samples.py --req r<em>[1,6]</em> --dataset <em>[mnist,celeba]</em></code> 
 
 <code>python rq4_sgsm.py --req r<em>[1,7]</em></code> 
