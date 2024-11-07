@@ -91,7 +91,10 @@ For RQ4:
 
 <code>python rq4_gen_samples.py --req r<em>[1,6]</em> --dataset <em>[mnist,celeba]</em></code> 
 
+<code>python rq4_sgsm.py --req r<em>[1,7]</em></code> 
+  
 <code>python rq4_mnist_passrate.py</code>
 
 <code>python rq4_celeba_passrate.py</code>
+
 
