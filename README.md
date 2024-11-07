@@ -8,7 +8,7 @@ This repository contains the code and data for the framework "RBT4DNN".
 |SGSM. The ego is in the rightmost lane and is not in an intersection. | ![sori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_ori.png) | ![sgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_gen.png)|
 
 
-## Requirements
+## Requirements (M = MNIST, C = CelebA-HQ, S = SGSM)
 |Id<img width=200/>|Precondition<img width=200/>|Postcondition<img width=200/>|
 |:----------------:|:-------:|:-------------------------:|
 |[M1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M1)|The digit is a 2 and has very low height|label as 2|
