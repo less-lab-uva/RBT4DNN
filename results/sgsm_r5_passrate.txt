@@ -1,0 +1,11 @@
+Pass Rate for r5
+Iteration 0 Pass Rate for r5 is 0.999
+Iteration 1 Pass Rate for r5 is 0.996
+Iteration 2 Pass Rate for r5 is 0.9966666666666667
+Iteration 3 Pass Rate for r5 is 0.99725
+Iteration 4 Pass Rate for r5 is 0.9976
+Iteration 5 Pass Rate for r5 is 0.998
+Iteration 6 Pass Rate for r5 is 0.9974285714285714
+Iteration 7 Pass Rate for r5 is 0.997375
+Iteration 8 Pass Rate for r5 is 0.9973333333333333
+Iteration 9 Pass Rate for r5 is 0.9975

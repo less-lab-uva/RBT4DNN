@@ -1,0 +1,11 @@
+Pass Rate for r2
+Iteration 0 Pass Rate for r2 is 0.14
+Iteration 1 Pass Rate for r2 is 0.1355
+Iteration 2 Pass Rate for r2 is 0.13566666666666666
+Iteration 3 Pass Rate for r2 is 0.132
+Iteration 4 Pass Rate for r2 is 0.1314
+Iteration 5 Pass Rate for r2 is 0.13283333333333333
+Iteration 6 Pass Rate for r2 is 0.13285714285714287
+Iteration 7 Pass Rate for r2 is 0.131125
+Iteration 8 Pass Rate for r2 is 0.13233333333333333
+Iteration 9 Pass Rate for r2 is 0.1325

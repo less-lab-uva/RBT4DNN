@@ -1,0 +1,11 @@
+Pass Rate for r6
+Iteration 0 Pass Rate for r6 is 0.995
+Iteration 1 Pass Rate for r6 is 0.996
+Iteration 2 Pass Rate for r6 is 0.997
+Iteration 3 Pass Rate for r6 is 0.997
+Iteration 4 Pass Rate for r6 is 0.9974
+Iteration 5 Pass Rate for r6 is 0.9976666666666667
+Iteration 6 Pass Rate for r6 is 0.9975714285714286
+Iteration 7 Pass Rate for r6 is 0.9975
+Iteration 8 Pass Rate for r6 is 0.9977777777777778
+Iteration 9 Pass Rate for r6 is 0.9979

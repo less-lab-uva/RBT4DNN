@@ -1,0 +1,11 @@
+Pass Rate for r3
+Iteration 0 Pass Rate for r3 is 0.886
+Iteration 1 Pass Rate for r3 is 0.8835
+Iteration 2 Pass Rate for r3 is 0.8786666666666667
+Iteration 3 Pass Rate for r3 is 0.886
+Iteration 4 Pass Rate for r3 is 0.8868
+Iteration 5 Pass Rate for r3 is 0.886
+Iteration 6 Pass Rate for r3 is 0.888
+Iteration 7 Pass Rate for r3 is 0.891875
+Iteration 8 Pass Rate for r3 is 0.8917777777777778
+Iteration 9 Pass Rate for r3 is 0.8917

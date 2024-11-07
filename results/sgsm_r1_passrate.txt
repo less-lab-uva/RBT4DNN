@@ -1,0 +1,11 @@
+Pass Rate for r1
+Iteration 0 Pass Rate for r1 is 0.644
+Iteration 1 Pass Rate for r1 is 0.6485
+Iteration 2 Pass Rate for r1 is 0.6466666666666666
+Iteration 3 Pass Rate for r1 is 0.654
+Iteration 4 Pass Rate for r1 is 0.656
+Iteration 5 Pass Rate for r1 is 0.6561666666666667
+Iteration 6 Pass Rate for r1 is 0.6572857142857143
+Iteration 7 Pass Rate for r1 is 0.6575
+Iteration 8 Pass Rate for r1 is 0.6572222222222223
+Iteration 9 Pass Rate for r1 is 0.6577
