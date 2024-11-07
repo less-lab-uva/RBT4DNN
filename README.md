@@ -1,6 +1,11 @@
 # RBT4DNN
 This repository contains the code and data for the framework "RBT4DNN".
 
+|Precondition|Real Images|Generated Images|
+|-------------|-----------|---------------|
+|MNIST. The digit is a 7 and is very thick. | ![mori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_ori.png) | ![mgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_gen.png)|
+|CelebA-HQ. The person is wearing eyeglasses and has black hair. | ![cori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/c1_ori.png) | ![cgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/c1_gen.png)|
+
 ## Requirements
 ![requirements](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/requirements.png)
 
@@ -67,7 +72,7 @@ Use the following code to train the glossary term classifier for a glossary term
 
 <code>python train_classifier.py --fet [glossary_term] --dataset [dataset]</code>
 
-The pretrained models used in the paper can be found here [trained models](https://zenodo.org/records/14047510)
+The pretrained models used in the paper can be found here [trained models](https://zenodo.org/records/14051679)
 
 ### Run RQ Studies
 
