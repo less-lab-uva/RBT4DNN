@@ -8,7 +8,7 @@ This repository contains the code and data for the framework "RBT4DNN".
 |SGSM. The ego is in the rightmost lane and is not in an intersection. | ![sori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_ori.png) | ![sgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_gen.png)|
 
 
-## Requirements (M = MNIST, C = CelebA-HQ, S = SGSM)
+## Requirements (M = MNIST, C = CelebA-HQ, S = SGSM, generated images: [data/images from loras](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras))
 |Id<img width=200/>|Precondition<img width=200/>|Postcondition<img width=200/>|
 |:----------------:|:-------:|:-------------------------:|
 |[M1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M1)|The digit is a 2 and has very low height|label as 2|
@@ -32,7 +32,7 @@ This repository contains the code and data for the framework "RBT4DNN".
 |[S7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S7)|A vehicle is in the lane to the right and within 7 meters|do not steer to the right
 
 ## Result Data
-The results of our experiments can be found in [results](https://github.com/nusratdeeptee/RBT4DNN/tree/main/results). The description of the files are as follows:
+The results of our experiments can be found in [results/](https://github.com/nusratdeeptee/RBT4DNN/tree/main/results). The description of the files are as follows:
 
 - rq1_<em>[dataset]</em>.json: Contains the test and generated data percentage match for the dataset. The dataset value can be mnist, celeba or sgsm.
 - rq1_<em>[dataset]</em>_fulldata.json: Contains the detail results for the dataset. For each requirement and for each image, this file contains the glossary term classifiers' decision with the image id.
