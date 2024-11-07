@@ -1,0 +1,100 @@
+calculating KID for r1
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/mnist_r1" with extensions png,jpg,jpeg
+Found 264 samples
+
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_mnist_r1/sample_gen/r1" with extensions png,jpg,jpeg
+Found 264 samples
+Processing samples                  
+Kernel Inception Distance: 0.19361498228377524 ± 0.0063602063259692474
+{'kernel_inception_distance_mean': 0.19361498228377524, 'kernel_inception_distance_std': 0.0063602063259692474}
+
+
+
+calculating KID for r2
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/mnist_r2" with extensions png,jpg,jpeg
+Found 292 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_mnist_r2/sample_gen/r2" with extensions png,jpg,jpeg
+Found 292 samples
+Processing samples                  
+Kernel Inception Distance: 0.3550898947679924 ± 0.010280049100076459
+{'kernel_inception_distance_mean': 0.3550898947679924, 'kernel_inception_distance_std': 0.010280049100076459}
+
+
+
+calculating KID for r3
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/mnist_r3" with extensions png,jpg,jpeg
+Found 200 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_mnist_r3/sample_gen/r3" with extensions png,jpg,jpeg
+Found 200 samples
+Processing samples                  
+Kernel Inception Distance: 0.30837638924400257 ± 0.008830630380505399
+{'kernel_inception_distance_mean': 0.30837638924400257, 'kernel_inception_distance_std': 0.008830630380505399}
+
+
+
+calculating KID for r4
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/mnist_r4" with extensions png,jpg,jpeg
+Found 286 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_mnist_r4/sample_gen/r4" with extensions png,jpg,jpeg
+Found 286 samples
+Processing samples                  
+Kernel Inception Distance: 0.1676669749447601 ± 0.006492354783855415
+{'kernel_inception_distance_mean': 0.1676669749447601, 'kernel_inception_distance_std': 0.006492354783855415}
+
+
+
+calculating KID for r5
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/mnist_r5" with extensions png,jpg,jpeg
+Found 166 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_mnist_r5/sample_gen/r5" with extensions png,jpg,jpeg
+Found 166 samples
+Processing samples                  
+Kernel Inception Distance: 0.18177417197364265 ± 0.005376083147855696
+{'kernel_inception_distance_mean': 0.18177417197364265, 'kernel_inception_distance_std': 0.005376083147855696}
+
+
+
+calculating KID for r6
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/mnist_r6" with extensions png,jpg,jpeg
+Found 120 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_mnist_r6/sample_gen/r6" with extensions png,jpg,jpeg
+Found 120 samples
+Processing samples                  
+Kernel Inception Distance: 0.2264482894570707 ± 0.0035694545550225155
+{'kernel_inception_distance_mean': 0.2264482894570707, 'kernel_inception_distance_std': 0.0035694545550225155}

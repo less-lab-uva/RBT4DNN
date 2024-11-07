@@ -1,0 +1,99 @@
+calculating KID for r1
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/celeba_r1" with extensions png,jpg,jpeg
+Found 290 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_celeba_r1/sample_gen/r1" with extensions png,jpg,jpeg
+Found 290 samples
+Processing samples                  
+Kernel Inception Distance: 0.12250131936553028 ± 0.005650483922168736
+{'kernel_inception_distance_mean': 0.12250131936553028, 'kernel_inception_distance_std': 0.005650483922168736}
+
+
+
+calculating KID for r2
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/celeba_r2" with extensions png,jpg,jpeg
+Found 116 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_celeba_r2/sample_gen/r2" with extensions png,jpg,jpeg
+Found 116 samples
+Processing samples                  
+Kernel Inception Distance: 0.09701425595801769 ± 0.002515333232537515
+{'kernel_inception_distance_mean': 0.09701425595801769, 'kernel_inception_distance_std': 0.002515333232537515}
+
+
+
+calculating KID for r3
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/celeba_r3" with extensions png,jpg,jpeg
+Found 241 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_celeba_r3/sample_gen/r3" with extensions png,jpg,jpeg
+Found 241 samples
+Processing samples                  
+Kernel Inception Distance: 0.11651920288825757 ± 0.007026184131252632
+{'kernel_inception_distance_mean': 0.11651920288825757, 'kernel_inception_distance_std': 0.007026184131252632}
+
+
+
+calculating KID for r4
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/celeba_r4" with extensions png,jpg,jpeg
+Found 228 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_celeba_r4/sample_gen/r4" with extensions png,jpg,jpeg
+Found 228 samples
+Processing samples                  
+Kernel Inception Distance: 0.07826437241556188 ± 0.0035675465999430453
+{'kernel_inception_distance_mean': 0.07826437241556188, 'kernel_inception_distance_std': 0.0035675465999430453}
+
+
+
+calculating KID for r5
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/celeba_r5" with extensions png,jpg,jpeg
+Found 176 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_celeba_r5/sample_gen/r5" with extensions png,jpg,jpeg
+Found 176 samples
+Processing samples                  
+Kernel Inception Distance: 0.05786475098642677 ± 0.0030565576488667135
+{'kernel_inception_distance_mean': 0.05786475098642677, 'kernel_inception_distance_std': 0.0030565576488667135}
+
+
+
+calculating KID for r6
+
+
+Creating feature extractor "inception-v3-compat" with features ['2048']
+Extracting features from input1
+Looking for samples non-recursivelty in "data/celeba_r6" with extensions png,jpg,jpeg
+Found 135 samples
+Processing samples                  
+Extracting features from input2
+Looking for samples non-recursivelty in "output/flux_celeba_r6/sample_gen/r6" with extensions png,jpg,jpeg
+Found 135 samples
+Processing samples                  
+Kernel Inception Distance: 0.09444234684738011 ± 0.0019292739842751766
+{'kernel_inception_distance_mean': 0.09444234684738011, 'kernel_inception_distance_std': 0.0019292739842751766}

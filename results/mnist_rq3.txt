@@ -1,0 +1,121 @@
+c1 = ratio of the images with decision 1
+c0 = ratio of the images with decision 0
+
+calculating JS metric for r1
+calculating for Very_Low_Height
+for gtc, c1 = 0.9962121212121212, c0 = 0.003787878787878788
+for lora, c1 = 0.968, c0 = 0.032
+for flux, c1 = 0.16, c0 = 0.84
+calculating for Very_Thick
+for gtc, c1 = 0.007575757575757576, c0 = 0.9924242424242424
+for lora, c1 = 0.0, c0 = 1.0
+for flux, c1 = 0.0, c0 = 1.0
+calculating for Very_Left_Leaning
+for gtc, c1 = 0.4166666666666667, c0 = 0.5833333333333334
+for lora, c1 = 0.743, c0 = 0.257
+for flux, c1 = 0.076, c0 = 0.924
+calculating for Very_Right_Leaning
+for gtc, c1 = 0.22727272727272727, c0 = 0.7727272727272727
+for lora, c1 = 0.011, c0 = 0.989
+for flux, c1 = 0.029, c0 = 0.971
+JS distance between real and lora image: 0.047551963763105415, between real and flux image:0.210884763151966
+
+
+calculating JS metric for r2
+calculating for Very_Low_Height
+for gtc, c1 = 0.0, c0 = 1.0
+for lora, c1 = 0.0, c0 = 1.0
+for flux, c1 = 0.144, c0 = 0.856
+calculating for Very_Thick
+for gtc, c1 = 1.0, c0 = 0.0
+for lora, c1 = 0.985, c0 = 0.015
+for flux, c1 = 0.001, c0 = 0.999
+calculating for Very_Left_Leaning
+for gtc, c1 = 0.030821917808219176, c0 = 0.9691780821917808
+for lora, c1 = 0.006, c0 = 0.994
+for flux, c1 = 0.141, c0 = 0.859
+calculating for Very_Right_Leaning
+for gtc, c1 = 0.09246575342465753, c0 = 0.9075342465753424
+for lora, c1 = 0.011, c0 = 0.989
+for flux, c1 = 0.041, c0 = 0.959
+JS distance between real and lora image: 0.010492839579747365, between real and flux image:0.2770462492605074
+
+
+calculating JS metric for r3
+calculating for Very_Low_Height
+for gtc, c1 = 0.0, c0 = 1.0
+for lora, c1 = 0.0, c0 = 1.0
+for flux, c1 = 0.076, c0 = 0.924
+calculating for Very_Thick
+for gtc, c1 = 1.0, c0 = 0.0
+for lora, c1 = 0.993, c0 = 0.007
+for flux, c1 = 0.005, c0 = 0.995
+calculating for Very_Left_Leaning
+for gtc, c1 = 0.05, c0 = 0.95
+for lora, c1 = 0.08, c0 = 0.92
+for flux, c1 = 0.152, c0 = 0.848
+calculating for Very_Right_Leaning
+for gtc, c1 = 0.06, c0 = 0.94
+for lora, c1 = 0.001, c0 = 0.999
+for flux, c1 = 0.03, c0 = 0.97
+JS distance between real and lora image: 0.00841722812604339, between real and flux image:0.2604379971263105
+
+
+calculating JS metric for r4
+calculating for Very_Low_Height
+for gtc, c1 = 0.05244755244755245, c0 = 0.9475524475524476
+for lora, c1 = 0.01, c0 = 0.99
+for flux, c1 = 0.134, c0 = 0.866
+calculating for Very_Thick
+for gtc, c1 = 0.02097902097902098, c0 = 0.9790209790209791
+for lora, c1 = 0.0, c0 = 1.0
+for flux, c1 = 0.0, c0 = 1.0
+calculating for Very_Left_Leaning
+for gtc, c1 = 1.0, c0 = 0.0
+for lora, c1 = 0.93, c0 = 0.07
+for flux, c1 = 0.161, c0 = 0.839
+calculating for Very_Right_Leaning
+for gtc, c1 = 0.0, c0 = 1.0
+for lora, c1 = 0.0, c0 = 1.0
+for flux, c1 = 0.021, c0 = 0.979
+JS distance between real and lora image: 0.014557313892601278, between real and flux image:0.1746640627710165
+
+
+calculating JS metric for r5
+calculating for Very_Low_Height
+for gtc, c1 = 0.07228915662650602, c0 = 0.927710843373494
+for lora, c1 = 0.012, c0 = 0.988
+for flux, c1 = 0.2, c0 = 0.8
+calculating for Very_Thick
+for gtc, c1 = 0.1144578313253012, c0 = 0.8855421686746988
+for lora, c1 = 0.026, c0 = 0.974
+for flux, c1 = 0.0, c0 = 1.0
+calculating for Very_Left_Leaning
+for gtc, c1 = 0.0, c0 = 1.0
+for lora, c1 = 0.0, c0 = 1.0
+for flux, c1 = 0.054, c0 = 0.946
+calculating for Very_Right_Leaning
+for gtc, c1 = 1.0, c0 = 0.0
+for lora, c1 = 0.908, c0 = 0.092
+for flux, c1 = 0.041, c0 = 0.959
+JS distance between real and lora image: 0.02218933478199948, between real and flux image:0.24712958011062638
+
+
+calculating JS metric for r6
+calculating for Very_Low_Height
+for gtc, c1 = 1.0, c0 = 0.0
+for lora, c1 = 0.977, c0 = 0.023
+for flux, c1 = 0.257, c0 = 0.743
+calculating for Very_Thick
+for gtc, c1 = 0.0, c0 = 1.0
+for lora, c1 = 0.0, c0 = 1.0
+for flux, c1 = 0.001, c0 = 0.999
+calculating for Very_Left_Leaning
+for gtc, c1 = 0.15, c0 = 0.85
+for lora, c1 = 0.09, c0 = 0.91
+for flux, c1 = 0.09, c0 = 0.91
+calculating for Very_Right_Leaning
+for gtc, c1 = 0.5333333333333333, c0 = 0.4666666666666667
+for lora, c1 = 0.528, c0 = 0.472
+for flux, c1 = 0.043, c0 = 0.957
+JS distance between real and lora image: 0.004455727633049246, between real and flux image:0.19685863776510143
