@@ -2,9 +2,11 @@
 This repository contains the code and data for the framework "RBT4DNN".
 
 |Precondition|Real Images|Generated Images|
-|-------------|-----------|---------------|
-|MNIST. The digit is a 7 and is very thick. | ![mori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_ori.png) | ![mgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_gen.png)|
+|:----------:|:-----------:|:------------:|
+|MNIST. The digit is a 7 and is very thick. |[<img src="https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_ori.png" width="200"/>](m3_ori.png)| [<img src="https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_gen.png" width="200"/>](m3_gen.png)|
 |CelebA-HQ. The person is wearing eyeglasses and has black hair. | ![cori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/c1_ori.png) | ![cgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/c1_gen.png)|
+|SGSM. The ego is in the rightmost lane and is not in an intersection. | ![sori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_ori.png) | ![sgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_gen.png)|
+
 
 ## Requirements
 ![requirements](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/requirements.png)
