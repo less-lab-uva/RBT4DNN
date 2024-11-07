@@ -89,6 +89,11 @@ For RQ3:
 
 For RQ4:
 
+Before running SGSM experiment, download ComfyUI code from (https://github.com/comfyanonymous/ComfyUI) to the project directory.
+Copy pretrained SGSM loras from [trained models](https://zenodo.org/records/14047510) to ComfyUI/models/loras/ directory.
+
+Follow the instructions in (https://comfyanonymous.github.io/ComfyUI_examples/flux/) and copy the flux models to the appropriate ComfyUI subdirectories.
+
 <code>python rq4_gen_samples.py --req r<em>[1,6]</em> --dataset <em>[mnist,celeba]</em></code> 
 
 <code>python rq4_sgsm.py --req r<em>[1,7]</em></code> 
