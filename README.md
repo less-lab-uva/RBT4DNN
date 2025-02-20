@@ -1,18 +1,17 @@
 # RBT4DNN
 This repository contains the code and data for the framework "RBT4DNN".
 
-## MNIST Glossary Terms
-
-The following table shows glossary terms for MNIST digits for different ranges of values for different Morphometric attributes with associated SNL text phrasing.
-
-![mnist_glossary_terms](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/mnist_glossary_term.png)
-
 |Precondition|Real Images|Generated Images|
 |:----------:|:-----------:|:------------:|
 |MNIST. The digit is a 7 and is very thick. |[<img src="https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_ori.png" width="200"/>](m3_ori.png)| [<img src="https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_gen.png" width="200"/>](m3_gen.png)|
 |CelebA-HQ. The person is wearing eyeglasses and has black hair. | ![cori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/c1_ori.png) | ![cgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/c1_gen.png)|
 |SGSM. The ego is in the rightmost lane and is not in an intersection. | ![sori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_ori.png) | ![sgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_gen.png)|
 
+## MNIST Glossary Terms
+
+The following table shows glossary terms for MNIST digits for different ranges of values for different Morphometric attributes with associated SNL text phrasing.
+
+![mnist_glossary_terms](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/mnist_glossary_term.png)
 
 ## Requirements (M = MNIST, C = CelebA-HQ, S = SGSM, generated images: [data/images from loras](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras))
 |Id<img width=200/>|Precondition<img width=200/>|Postcondition<img width=200/>|
