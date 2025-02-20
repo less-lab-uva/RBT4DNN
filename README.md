@@ -1,6 +1,12 @@
 # RBT4DNN
 This repository contains the code and data for the framework "RBT4DNN".
 
+## MNIST Glossary Terms
+
+The following table shows glossary terms for MNIST digits for different ranges of values for different Morphometric attributes with associated SNL text phrasing.
+
+![mnist_glossary_terms](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/mnist_glossary_term.png)
+
 |Precondition|Real Images|Generated Images|
 |:----------:|:-----------:|:------------:|
 |MNIST. The digit is a 7 and is very thick. |[<img src="https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_ori.png" width="200"/>](m3_ori.png)| [<img src="https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_gen.png" width="200"/>](m3_gen.png)|
