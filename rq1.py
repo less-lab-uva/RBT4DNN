@@ -96,7 +96,7 @@ def compute_match(dataloader, model1, model2, device, feature1 = None, feature2 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-def mnist(req, flag = True, turn = None):
+def mnist(req, flag = True, turn = None, datatype = None):
     im_size = 64
     batch_size = 64
     transform = transforms.Compose([
@@ -154,8 +154,12 @@ def mnist(req, flag = True, turn = None):
         start = turn * 100
         end = turn * 100 + 100
         im_names = [f'{i}.png' for i in range(start, end)]
-
-        im_path = 'data/images_from_loras/M' + req.split('r')[1]
+        if datatype == "alldata":
+            im_path = 'data/images_from_loras/Alldata_M' + req.split('r')[1]
+        elif datatype == "allreq":
+            im_path = 'data/images_from_loras/Allreq_M' + req.split('r')[1]
+        else:
+            im_path = 'data/images_from_loras/M' + req.split('r')[1]
         gen_dataset = CustomDataset(im_names = im_names, label = None, transform = transform, 
                     im_path = im_path, feature = None, im_channel = 1)              
         gen_dataloader = DataLoader(gen_dataset,
@@ -247,8 +251,12 @@ def main(args):
     print("model loading done")
     test_score = []
     gen_score = []
+    gen_score_alldata = []
+    gen_score_allreq = []
     test_mismatch = []
     gen_mismatch = []
+    gen_mismatch_alldata = []
+    gen_mismatch_allreq = []
     results = {}
     for r in req:
         print(f'Starting calculation for requirement {r}')
@@ -264,37 +272,87 @@ def main(args):
         test_mismatch.append(mismatch_index)
 
         score = []
+        score_alldata = []
+        score_allreq = []
         r_mismatch = []
+        r_mismatch_alldata = []
+        r_mismatch_allreq = []
         print(f"Calculating success rate over generated images for {r}.")
         img_in = []
+        img_in_alldata = []
+        img_in_allreq = []
         pred1 = []
+        pred1_alldata = []
+        pred1_allreq = []
         pred2 = []
+        pred2_alldata = []
+        pred2_allreq = []
         for i in range(sampling_epoch):
             print(f'generating image for turn {i+1} for {r}')
             print("score calculation")
             if dataset =='mnist':
-                 _, gen_dataloader, _, _, _, _ = mnist(r, flag = False, turn = i)
+                _, gen_dataloader, _, _, _, _ = mnist(r, flag = False, turn = i)
+                _, gen_dataloader_alldata, _, _, _, _ = mnist(r, flag = False, turn = i, datatype = "alldata")
+                _, gen_dataloader_allreq, _, _, _, _ = mnist(r, flag = False, turn = i, datatype = "allreq")
+                generated_score_alldata, mismatch_index_alldata, gen_img_index_alldata, gen_pred1_alldata, gen_pred2_alldata, _, _ = compute_match(dataloader = gen_dataloader_alldata, model1 = model1, 
+                            model2 = model2, device = device)
+                generated_score_allreq, mismatch_index_allreq, gen_img_index_allreq, gen_pred1_allreq, gen_pred2_allreq, _, _ = compute_match(dataloader = gen_dataloader_allreq, model1 = model1, 
+                            model2 = model2, device = device)
+            
             elif dataset == 'celeba':
                 _, gen_dataloader, _, _, _, _ = celeba(r, flag = False, turn = i)
             generated_score, mismatch_index, gen_img_index, gen_pred1, gen_pred2, _, _ = compute_match(dataloader = gen_dataloader, model1 = model1, 
                             model2 = model2, device = device)
+   
             score.append(generated_score*100)
             img_in.extend(gen_img_index)
             pred1.extend(gen_pred1)
             pred2.extend(gen_pred2)
+            if dataset =='mnist':
+                score_alldata.append(generated_score_alldata*100)
+                img_in_alldata.extend(gen_img_index_alldata)
+                pred1_alldata.extend(gen_pred1_alldata)
+                pred2_alldata.extend(gen_pred2_alldata)
+
+                score_allreq.append(generated_score_allreq*100)
+                img_in_allreq.extend(gen_img_index_allreq)
+                pred1_allreq.extend(gen_pred1_allreq)
+                pred2_allreq.extend(gen_pred2_allreq)
         gen_score.append(score)
-        results[r][feature1] = {
-                'test_pred': ori_pred1,
-                'test_image_paths': ori_img_index,
-                'test_labels': ori_labels1,
-                'gen_pred': pred1,
-                'gen_image_paths': img_in
-            }
-        results[r][feature2] = {
-                'test_pred': ori_pred2,
-                'test_labels': ori_labels2,
-                'gen_pred': pred2,
-            }
+        if dataset == "mnist":
+            gen_score_alldata.append(score_alldata)
+            gen_score_allreq.append(score_allreq)
+            results[r][feature1] = {
+                    'test_pred': ori_pred1,
+                    'test_image_paths': ori_img_index,
+                    'test_labels': ori_labels1,
+                    'gen_pred': pred1,
+                    'gen_image_paths': img_in,
+                    'gen_pred_alldata': pred1_alldata,
+                    'gen_image_paths_alldata': img_in_alldata,
+                    'gen_pred_allreq': pred1_allreq,
+                    'gen_image_paths_allreq': img_in_allreq
+                }
+            results[r][feature2] = {
+                    'test_pred': ori_pred2,
+                    'test_labels': ori_labels2,
+                    'gen_pred': pred2,
+                    'gen_pred_alldata': pred2_alldata,
+                    'gen_pred_allreq': pred2_allreq
+                }
+        else:
+            results[r][feature1] = {
+                    'test_pred': ori_pred1,
+                    'test_image_paths': ori_img_index,
+                    'test_labels': ori_labels1,
+                    'gen_pred': pred1,
+                    'gen_image_paths': img_in
+                }
+            results[r][feature2] = {
+                    'test_pred': ori_pred2,
+                    'test_labels': ori_labels2,
+                    'gen_pred': pred2
+                }
 
     print(f'Success rate over test dataset: {test_score}')
     print(f'Success rate over generated images:')
@@ -302,7 +360,12 @@ def main(args):
     scores = {}
     scores['test'] = test_score
     scores['gen'] = gen_score
+    if dataset == "mnist":
+        scores['gen_fulldata'] = gen_score_alldata
+        score['gen_fullreq'] = gen_score_allreq
+
     print(f'\n\nmismatch from test set: {test_mismatch}')
+
     with open(f"results/rq1_{args.dataset}_fulldata.json", "w") as f:
         json.dump(results, f, indent=4)
     with open(f"results/rq1_{args.dataset}.json", "w") as f:
