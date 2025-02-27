@@ -43,7 +43,12 @@ The following table shows glossary terms for MNIST digits for different ranges o
 |[S4](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S4)|The ego is in the rightmost lane and is not in an intersection|do not steer to the right|
 |[S5](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S5)|The ego is in the leftmost lane and is not in an intersection|do not steer to the left|
 |[S6](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S6)|A vehicle is in the lane to the left and within 7 meters|do not steer to the left|
-|[S7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S7)|A vehicle is in the lane to the right and within 7 meters|do not steer to the right
+|[S7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S7)|A vehicle is in the lane to the right and within 7 meters|do not steer to the right|
+|[I1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I1)|The single real animal has feathers, wings, a beak, and two legs|label as a hyponym of bird|
+|[I2](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I2)|The single real animal has fur or hair, hooves, and two legs|label as a hyponym of ungulate|
+|[I3](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I3)|The single real animal has an exoskeleton, antennae, and six legs|label as a hyponym of insect|
+|[I4](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I4)|The single animal has no limbs and no ears |label as a hyponym of snake|
+
 
 ## GTC Training
 
