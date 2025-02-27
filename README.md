@@ -2,6 +2,14 @@
 
 RBT4DNN is a framework designed to generate high-quality test cases tailored to specific requirements, as described in the paper "RBT4DNN: Requirements-based Testing of Neural Networks". This repository showcases the usability of the proposed approach and enables the replication of the results presented in the paper.
 
+## Overview
+
+<p align="center">
+  <img src="https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/rbt4dnn_overview.png" />
+</p>
+
+## Illustration of Training and Generated Data across different requirements
+
 |Precondition|Real Images|Generated Images|
 |:----------:|:-----------:|:------------:|
 |MNIST. The digit is a 7 and is very thick. |[<img src="https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_ori.png" width="200"/>](m3_ori.png)| [<img src="https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/m3_gen.png" width="200"/>](m3_gen.png)|
