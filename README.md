@@ -1,5 +1,6 @@
 # RBT4DNN
-This repository contains the code and data for the framework "RBT4DNN".
+
+RBT4DNN is a framework designed to generate high-quality test cases tailored to specific requirements, as described in the paper "RBT4DNN: Requirements-based Testing of Neural Networks". This repository showcases the usability of the proposed approach and enables the replication of the results presented in the paper.
 
 |Precondition|Real Images|Generated Images|
 |:----------:|:-----------:|:------------:|
