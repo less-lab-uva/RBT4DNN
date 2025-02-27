@@ -36,6 +36,20 @@ The following table shows glossary terms for MNIST digits for different ranges o
 |[S6](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S6)|A vehicle is in the lane to the left and within 7 meters|do not steer to the left|
 |[S7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S7)|A vehicle is in the lane to the right and within 7 meters|do not steer to the right
 
+## GTC Training
+
+To train a Glossary Term Classifier (GTC), we first held out test data from the training data. 
+To do that, we first computed the set, $D = [D_1, D_2,..., D_l]$, 
+where $D_i$ is a set satisfying the requirement $i$. 
+We also computed $\overline{D} = [\overline{D_1}, \overline{D_2},..., \overline{D_l}]$, where $\overline{D_i}$ is a set that does not satisfy requirement $i$. 
+To construct the test set, we sorted $D$ and inserted $r$\% from the smallest set of $D$ into the test set.
+Then, we moved to the next smaller set and inserted the data absent in the test set and previously considered sets. While inserting data from $D_i$, we also ensured that the amount of the data in the test set satisfying requirement $i$ is not more than $r$\% of $D_i$. 
+We repeated the same procedure for $\overline{D}$ with an additional checking that $D$ did not have the inserted data. 
+
+For each glossary term, we split the training data to include an equal number of randomly chosen inputs with and without the glossary term. 
+We randomly held out 10\% of the data with and without the glossary term for the validation set. 
+Then, we trained the GTC model over the filtered train set and validated it using the validation set.
+
 ## Result Data
 The results of our experiments can be found in [results/](https://github.com/nusratdeeptee/RBT4DNN/tree/main/results). The description of the files are as follows:
 
