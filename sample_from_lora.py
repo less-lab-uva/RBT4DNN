@@ -113,6 +113,18 @@ def celeba(req):
     
     return weight_path, prompt[req], im_path, img_size
 
+def imagenet(req):
+    weight_path = f"/project/lesslab/rbt4dnn/flux/ai-toolkit/output/imagenet_{req}/imagenet_{req}.safetensors"
+    prompt ={
+        "r1": "Imagenet. The single real animal has feathers, wings, a beak, and two legs.",
+        "r2": "Imagenet. The single real animal has fur or hair, hooves, and four legs.",
+        "r3": "Imagenet. The single real animal has an exoskeleton, antennae, and six legs.",
+        "r4": "Imagenet. The single animal has smooth scales, elongated cylindrical body and eyes and no leg, no ears, no antennae and no fins."
+    }
+    im_path = f"/project/lesslab/rbt4dnn/flux/ai-toolkit/output/imagenet_{req}"
+    img_size = 224
+    return weight_path, prompt[req], im_path, img_size
+
 def sgsm(req):
     weight_path = f"output/flux_lora_sgsm_{req}/flux_lora_sgsm_{req}.safetensors"
     prompt ={
