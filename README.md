@@ -160,6 +160,8 @@ Copy driving_model.ckpt from [trained models](https://zenodo.org/records/1405167
 <code>python rq4_gen_samples.py --req r<em>[1,6]</em> --dataset <em>[mnist,celeba]</em></code> 
 
 <code>python rq4_sgsm.py --req r<em>[1,7]</em></code> 
+
+<code>python rq4_imagenet.py --req r<em>[1,4]</em></code> 
   
 <code>python rq4_mnist_passrate.py</code>
 
