@@ -46,7 +46,7 @@ The following table shows glossary terms for MNIST digits for different ranges o
 |[S6](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S6)|A vehicle is in the lane to the left and within 7 meters|do not steer to the left|
 |[S7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S7)|A vehicle is in the lane to the right and within 7 meters|do not steer to the right|
 |[I1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I1)|The single real animal has feathers, wings, a beak, and two legs|label as a hyponym of bird|
-|[I2](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I2)|The single real animal has fur or hair, hooves, and two legs|label as a hyponym of ungulate|
+|[I2](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I2)|The single real animal has fur or hair, hooves, and four legs|label as a hyponym of ungulate|
 |[I3](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I3)|The single real animal has an exoskeleton, antennae, and six legs|label as a hyponym of insect|
 |[I4](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I4)|The single animal has no limbs and no ears |label as a hyponym of snake|
 
