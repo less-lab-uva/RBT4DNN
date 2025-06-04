@@ -128,7 +128,9 @@ Use the following code to train the glossary term classifier for a glossary term
 
 <code>python train_classifier.py --fet [glossary_term] --dataset [dataset]</code>
 
-The pretrained models used in the paper can be found here [trained models](https://zenodo.org/records/14051679)
+### Pretrained Models
+
+The pretrained models (the classifier and the diffusion model checkpoints) used in the paper can be found here [trained models](https://zenodo.org/records/14051679)
 
 ### Run RQ Studies
 
