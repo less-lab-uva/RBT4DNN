@@ -10,8 +10,8 @@ import json
 from torch.utils.data import DataLoader
 from diffusers import FluxPipeline
 
-from rq1.train_classifier import ResnetModel, CustomDataset
-from rq1.sample_from_lora import sample_images
+from train_classifier import ResnetModel, CustomDataset
+from sample_from_lora import sample_images
 from PIL import Image
 from torchvision import transforms
 from torchvision.utils import save_image

@@ -3,7 +3,7 @@ from PIL import Image
 import torch
 from torchvision import transforms
 import sys
-from rq1.train_classifier import MyVitModel
+from train_classifier import MyVitModel
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model_location = "output/celeba_binary_classifier_LC/eyeglasses.pth"
