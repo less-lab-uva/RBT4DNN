@@ -117,7 +117,9 @@ For MNIST, download the train images and train-morpho.csv from here [MorphoMNIST
 
 For CelebA-HQ, download the images and the 40 attribute annotations list from here [CelebAMask-HQ](https://github.com/switchablenorms/CelebAMask-HQ)
 
-For SGSM, download the data from here [SGSM](https://github.com/less-lab-uva/SGSM)
+For SGSM, download data from here [SGSM](https://github.com/less-lab-uva/SGSM)
+
+For ImageNet, download data from here [ImageNet](https://www.image-net.org/download.php)
 
 To have train and test sets, run the following command:
 
@@ -134,6 +136,8 @@ To train a LoRA, we first need to create a folder with images and their associat
 <code>python create_celeba_image_datafolder.py</code>
 
 For SGSM, run the ipynb file: <code>create_sgsm_image_datafolder.ipynb</code>
+
+For ImageNet, run <code>python imagenet_precondition_filter.py</code>
 
 To train a LoRA, follow the steps from here [LoRA](https://github.com/ostris/ai-toolkit/)
 
