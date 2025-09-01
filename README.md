@@ -1,6 +1,6 @@
 # RBT4DNN
 
-RBT4DNN is a framework designed to generate high-quality test cases tailored to specific requirements, as described in the paper "RBT4DNN: Requirements-based Testing of Neural Networks". This repository showcases the usability of the proposed approach and enables the replication of the results presented in the paper.
+RBT4DNN is a framework designed to generate high-quality test cases tailored to specific requirements, as described in the paper ["RBT4DNN: Requirements-based Testing of Neural Networks"](https://arxiv.org/abs/2504.02737). This repository showcases the usability of the proposed approach and enables the replication of the results presented in the paper.
 
 ## Overview
 
@@ -17,11 +17,24 @@ RBT4DNN is a framework designed to generate high-quality test cases tailored to 
 |SGSM. The ego is in the rightmost lane and is not in an intersection. | ![sori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_ori.png) | ![sgen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/s4_gen.png)|
 |Imagenet. The single animal has no limbs and no ears. | ![iori](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/isSnake_train.png) | ![igen](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/isSnake_gen.png)|
 
-## MNIST Glossary Terms
+## Glossary Term Preparation
+
+### MNIST Glossary Terms
 
 The following table shows glossary terms for MNIST digits for different ranges of values for different Morphometric attributes with associated SNL text phrasing.
 
 ![mnist_glossary_terms](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/mnist_glossary_term.png)
+
+We converted the Morpho-MNIST values from this [source](https://github.com/dccastro/Morpho-MNIST) into binary labels. Each SNL text entry from the table above is mapped to its corresponding binary label using the Python script [gt_label_mnist.py](https://github.com/less-lab-uva/RBT4DNN/blob/main/gt_label_mnist.py)
+
+### CelebA-HQ Glossary Terms
+The [CelebA official website](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) provides 40 attributes. From these, we selected a subset to define the glossary terms. To demonstrate that RBT4DNN can also work with unlabeled data, we re-labeled the dataset using the [MiniCPM-o-2_6](https://huggingface.co/openbmb/MiniCPM-o-2_6) model. Label generation can be reproduced with the script [gt_label_generation_celebahq.py](https://github.com/less-lab-uva/RBT4DNN/blob/main/gt_label_generation_celebahq.py)
+
+### SGSM Glossary Terms
+For the SGSM dataset, we adopted the glossary terms from the paper: [S3C: Spatial Semantic Scene Coverage for Autonomous Vehicles](https://dl.acm.org/doi/abs/10.1145/3597503.3639178)
+
+### ImageNet Glossary Terms
+For ImageNet, we selected intermediate nodes from the [WordNet](https://wordnet.princeton.edu/) taxonomic tree—a lexical database that organizes words based on semantic relationships—that correspond to animals (e.g., bird). We then defined preconditions as combinations of morphological features, following a Zoology textbook. Specifically, we used standard morphological features of animals (e.g., feathers, wings, hooves, antennae) that distinguish levels in zoological taxa (e.g., birds, insects), and adopted these features as our glossary terms. To obtain labels for these glossary terms, we used the MiniCPM-o-2_6 model. The labeling process can be reproduced with the script [gt_label_generation_imagenet.py](https://github.com/less-lab-uva/RBT4DNN/blob/main/gt_label_generation_imagenet.py)
 
 ## Requirements (M = MNIST, C = CelebA-HQ, S = SGSM, generated images: [data/images from loras](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras))
 |Id<img width=200/>|Precondition<img width=200/>|Postcondition<img width=200/>|
