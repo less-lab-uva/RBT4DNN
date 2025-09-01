@@ -39,31 +39,31 @@ For ImageNet, we selected intermediate nodes from the [WordNet](https://wordnet.
 ## Requirements (M = MNIST, C = CelebA-HQ, S = SGSM, generated images: [data/images from loras](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras))
 |Id<img width=200/>|Precondition<img width=200/>|Postcondition<img width=200/>|
 |:----------------:|:-------:|:-------------------------:|
-|[M1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M1)|The digit is a 2 and has very low height|label as 2|
-|[M2](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M2)|The digit is a 3 and is very thick|label as 3|
-|[M3](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M3)|The digit is a 7 and is very thick|label as 7|
-|[M4](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M4)|The digit is a 9 and is very left leaning|label as 9|
-|[M5](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M5)|The digit is a 6 and is very right leaning|label as 6|
-|[M6](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M6)|The digit is a 0 and has very low height|label as 0|
-|[M7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M7)|The digit is an 8 and is very thin or very thick|label as 8|
-|[C1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C1)|The person is wearing eyeglasses and has black hair|label as eyeglasses|
-|[C2](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C2)|The person is wearing eyeglasses and has brown hair|label as eyeglasses|
-|[C3](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C3)|The person is wearing eyeglasses and has a mustache|label as eyeglasses|
-|[C4](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C4)|The person is wearing eyeglasses and has wavy hair|label as eyeglasses|
-|[C5](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C5)|The person is wearing eyeglasses and is bald|label as eyeglasses|
-|[C6](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C6)|The person is wearing eyeglasses and a hat|label as eyeglasses|
-|[C7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C7)|The person is wearing eyeglasses and has a 5 o’clock shadow or goatee or mustache or beard or sideburns|label as eyeglasses|
-|[S1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S1)|A vehicle is within 10 meters, in front, and in the same lane|not accelerate|
-|[S2](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S2)|The ego lane is controlled by a red or yellow light|decelerate|
-|[S3](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S3)|The ego lane is controlled by a green light, and no vehicle is in front, in the same lane, and within 10 meters|accelerate|
-|[S4](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S4)|The ego is in the rightmost lane and is not in an intersection|do not steer to the right|
-|[S5](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S5)|The ego is in the leftmost lane and is not in an intersection|do not steer to the left|
-|[S6](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S6)|A vehicle is in the lane to the left and within 7 meters|do not steer to the left|
-|[S7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S7)|A vehicle is in the lane to the right and within 7 meters|do not steer to the right|
-|[I1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I1)|The single real animal has feathers, wings, a beak, and two legs|label as a hyponym of bird|
-|[I2](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I2)|The single real animal has fur or hair, hooves, and four legs|label as a hyponym of ungulate|
-|[I3](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I3)|The single real animal has an exoskeleton, antennae, and six legs|label as a hyponym of insect|
-|[I4](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/I4)|The single animal has no limbs and no ears |label as a hyponym of snake|
+|[M1](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/M1)|The digit is a 2 and has very low height|label as 2|
+|[M2](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/M2)|The digit is a 3 and is very thick|label as 3|
+|[M3](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/M3)|The digit is a 7 and is very thick|label as 7|
+|[M4](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/M4)|The digit is a 9 and is very left leaning|label as 9|
+|[M5](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/M5)|The digit is a 6 and is very right leaning|label as 6|
+|[M6](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/M6)|The digit is a 0 and has very low height|label as 0|
+|[M7](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/M7)|The digit is an 8 and is very thin or very thick|label as 8|
+|[C1](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/C1)|The person is wearing eyeglasses and has black hair|label as eyeglasses|
+|[C2](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/C2)|The person is wearing eyeglasses and has brown hair|label as eyeglasses|
+|[C3](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/C3)|The person is wearing eyeglasses and has a mustache|label as eyeglasses|
+|[C4](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/C4)|The person is wearing eyeglasses and has wavy hair|label as eyeglasses|
+|[C5](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/C5)|The person is wearing eyeglasses and is bald|label as eyeglasses|
+|[C6](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/C6)|The person is wearing eyeglasses and a hat|label as eyeglasses|
+|[C7](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/C7)|The person is wearing eyeglasses and has a 5 o’clock shadow or goatee or mustache or beard or sideburns|label as eyeglasses|
+|[S1](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/S1)|A vehicle is within 10 meters, in front, and in the same lane|not accelerate|
+|[S2](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/S2)|The ego lane is controlled by a red or yellow light|decelerate|
+|[S3](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/S3)|The ego lane is controlled by a green light, and no vehicle is in front, in the same lane, and within 10 meters|accelerate|
+|[S4](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/S4)|The ego is in the rightmost lane and is not in an intersection|do not steer to the right|
+|[S5](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/S5)|The ego is in the leftmost lane and is not in an intersection|do not steer to the left|
+|[S6](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/S6)|A vehicle is in the lane to the left and within 7 meters|do not steer to the left|
+|[S7](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/S7)|A vehicle is in the lane to the right and within 7 meters|do not steer to the right|
+|[I1](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/I1)|The single real animal has feathers, wings, a beak, and two legs|label as a hyponym of bird|
+|[I2](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/I2)|The single real animal has fur or hair, hooves, and four legs|label as a hyponym of ungulate|
+|[I3](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/I3)|The single real animal has an exoskeleton, antennae, and six legs|label as a hyponym of insect|
+|[I4](https://github.com/less-lab-uva/RBT4DNN/tree/main/data/images_from_loras/I4)|The single animal has no limbs and no ears |label as a hyponym of snake|
 
 
 ## GTC Training
@@ -81,7 +81,7 @@ We randomly held out 10\% of the data with and without the glossary term for the
 Then, we trained the GTC model over the filtered train set and validated it using the validation set.
 
 ## Result Data
-The results of our experiments can be found in [results/](https://github.com/nusratdeeptee/RBT4DNN/tree/main/results). The description of the files are as follows:
+The results of our experiments can be found in [results/](https://github.com/less-lab-uva/RBT4DNN/tree/main/results). The description of the files are as follows:
 
 - rq1_<em>[dataset]</em>.json: Contains the test and generated data percentage match for the dataset. The dataset value can be mnist, celeba or sgsm.
 - rq1_<em>[dataset]</em>_fulldata.json: Contains the detail results for the dataset. For each requirement and for each image, this file contains the glossary term classifiers' decision with the image id.
@@ -90,13 +90,20 @@ The results of our experiments can be found in [results/](https://github.com/nus
 -  <em>[dataset]</em>_r<em>[req]</em>_passrate.txt: Contains passrates for 10 repetitions of the RQ4 study. req is 1-6 for the MNIST and CelebA-HQ datasets and 1-7 for the SGSM dataset. 
 
 ### RQ1:
-![rq1](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/rq1.png)
+![rq1](https://github.com/less-lab-uva/RBT4DNN/blob/main/Figures/rq1.png)
 
 ### RQ2:
-![rq2](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/rq2.png)
+![rq2](https://github.com/less-lab-uva/RBT4DNN/blob/main/Figures/rq2.png)
 
 ### RQ3:
-![rq3](https://github.com/nusratdeeptee/RBT4DNN/blob/main/Figures/rq3.png)
+![rq3](https://github.com/less-lab-uva/RBT4DNN/blob/main/Figures/rq3.png)
+
+### RQ4 and RQ5:
+![rq4_5](https://github.com/less-lab-uva/RBT4DNN/blob/main/Figures/rq4_5.png)
+
+### RQ6:
+![rq6](https://github.com/less-lab-uva/RBT4DNN/blob/main/Figures/rq6.png)
+![rq6_1](https://github.com/less-lab-uva/RBT4DNN/blob/main/Figures/rq6_1.png)
 
 ## Usage
 
@@ -116,7 +123,7 @@ To have train and test sets, run the following command:
 
 <code>python make_train_test_dataset.py</code>
 
-Note that, the sets are randomly generated, hence it is possible to observe little deviation in the results from our reported results. We reported the train and test sets used in our experiments in [data](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data) so that one can reproduce the exact results.
+Note that, the sets are randomly generated, hence it is possible to observe little deviation in the results from our reported results. We reported the train and test sets used in our experiments in [data](https://github.com/less-lab-uva/RBT4DNN/tree/main/data) so that one can reproduce the exact results.
 
 ### Train LoRA
 
@@ -180,8 +187,8 @@ Copy driving_model.ckpt from [trained models](https://zenodo.org/records/1405167
 
 <code>python rq4_imagenet.py --req r<em>[1,4]</em></code> 
   
-<code>python rq4_mnist_passrate.py</code>
+<code>python rq4_mnist.py</code>
 
-<code>python rq4_celeba_passrate.py</code>
+<code>python rq4_celeba.py</code>
 
 
