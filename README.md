@@ -172,7 +172,7 @@ For RQ3:
 
 <code>python rq3.py</code>
 
-For RQ4:
+For RQ4 and RQ5:
 
 Before running SGSM experiment, download ComfyUI code from (https://github.com/comfyanonymous/ComfyUI) to the project directory. We used v0.2.6.
 Copy pretrained SGSM loras from [trained models](https://zenodo.org/records/14051679) to ComfyUI/models/loras/ directory.
@@ -190,5 +190,9 @@ Copy driving_model.ckpt from [trained models](https://zenodo.org/records/1405167
 <code>python rq4_mnist.py</code>
 
 <code>python rq4_celeba.py</code>
+
+For RQ6:
+
+<code> python rq6_imagenet.py</code>
 
 
