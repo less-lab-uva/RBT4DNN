@@ -12,10 +12,7 @@ from torchvision import transforms
 from torchmetrics.image.kid import KernelInceptionDistance
 
 def main(args):
-    if args.dataset == 'sgsm':
-        req = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7']
-    else:
-        req = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6']
+    req = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7']
     for r in req:
         print(f'calculating KID for {r}\n\n')
 

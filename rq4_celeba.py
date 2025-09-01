@@ -19,18 +19,13 @@ transform = transforms.Compose([
                             transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5]),
                         ])
                         
-#Cleanup old logs
-for req in range(1,7):
-    if os.path.exists(f"results/celeba_r{req}_passrate.txt"):
-        os.remove(f"results/celeba_r{req}_passrate.txt")
-    
-for req in range(1, 7):
-    img_dir = f"rq4/output/flux_lora_celeba_r{req}/rq4_samples"
+def rq4(img_dir, file_accuracy, file_fault):
     img_files = [f for f in os.listdir(img_dir) if f.endswith('.png')]
     assert len(img_files) == 10000, "incorrect sample size"
-
-    print(f"Requirement {req} ...")
-    
+    if os.path.exists(file_accuracy):
+        os.remove(file_accuracy)
+    if os.path.exists(file_fault):
+        os.remove(file_fault)
     for it in range(10):
         pass_cases = []
         fail_cases = []
@@ -47,7 +42,29 @@ for req in range(1, 7):
                 else:
                     fail_cases.append(it*1000+index)
                 
-        with open(f"results/celeba_r{req}_passrate.txt", "a") as f:
+        with open(file_accuracy, "a") as f:
             f.write(f"Iteration {it} Pass Rate : "+str((1000-len(fail_cases))/1000)+"\n")
+        with open(file_fault, "a") as f:
+            f.write(f"Iteration {it} fail cases : "+str(fail_cases)+"\n")
         print(f"Iteration {it} Pass Rate : "+str((1000-len(fail_cases))/1000))
-        
+    
+    
+for req in range(1, 8):
+    print(f"Requirement {req} ...")
+    ###For LoRA
+    file_accuracy = f"results/celeba_r{req}_passrate.txt"
+    file_fault = f"results/celeba_r{req}_failcases.txt"    
+    img_dir = f"output/flux_lora_celeba_r{req}/sample_gen"
+    
+    rq4(img_dir, file_accuracy, file_fault)
+    ###For VQA LoRA
+    file_accuracy = f"results/celeba_r{req}_minicpm_passrate.txt"
+    file_fault = f"results/celeba_r{req}_minicpm_failcases.txt"    
+    img_dir = f"output/flux_lora_celeba_minicpm_r{req}/sample_gen"
+    
+    rq4(img_dir, file_accuracy, file_fault)
+    
+
+    
+    
+    

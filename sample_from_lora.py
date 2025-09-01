@@ -68,7 +68,8 @@ def mnist_single_lora(req, isreqdataonly = False):
         'r3': 'MNIST hand written in white on black background. The digit is a 7 and is very thick.',
         'r4': 'MNIST hand written digit in white on black background. The digit is a 9 and is very left leaning.',
         'r5': 'MNIST hand written digit in white on black background. The digit is a 6 and is very right leaning.',
-        'r6': 'MNIST hand written in white on black background. The digit is a 0 and has very low height.'
+        'r6': 'MNIST hand written in white on black background. The digit is a 0 and has very low height.',
+        'r7': 'MNIST hand written digit in white on black background. The digit is an 8 and is very thin or very thick.'
     }
 
 
@@ -83,7 +84,8 @@ def mnist(req):
         'r3': 'MNIST hand written digit in white on black background. The digit is a 7 and is very thick.',
         'r4': 'MNIST hand written digit in white on black background. The digit is a 9 and is very left leaning.',
         'r5': 'MNIST hand written digit in white on black background. The digit is a 6 and is very right leaning.',
-        'r6': 'MNIST hand written digit in white on black background. The digit is a 0 and has very low height.'
+        'r6': 'MNIST hand written digit in white on black background. The digit is a 0 and has very low height.',
+        'r7': 'MNIST hand written digit in white on black background. The digit is an 8 and is very thin or very thick.'
     }
 
 
@@ -103,6 +105,7 @@ def celeba(req):
         'r4': 'CelebAHQ close headshot of a person. The person is wearing eyeglasses and has wavy hair.',
         'r5': 'CelebAHQ close headshot of a person. The person is wearing eyeglasses and is bald.',
         'r6': 'CelebAHQ close headshot of a person. The person is wearing eyeglasses and hat.',
+        'r7': "CelebAHQ close headshot of a person. The person is wearing eyeglasses and has a 5 o'clock shadow or goatee or mustache or beard or sideburns."
     }
     
     img_size = 1024
@@ -239,7 +242,7 @@ if __name__=='__main__':
     parser.add_argument('--isReqDataOnly', default=False, type=bool)
     parser.add_argument('--num_samples', default = 1000, type = int)
     parser.add_argument('--num_samples_per_epoch', default = 100, type = int)
-    parser.add_argument('--req', nargs='+', default = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6'])
+    parser.add_argument('--req', nargs='+', default = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6', 'r7'])
     args = parser.parse_args()
 
     main(args)

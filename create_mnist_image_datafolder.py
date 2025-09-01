@@ -9,7 +9,7 @@ import torchvision
 from torch.utils.data.dataset import Dataset
 from torch.utils.data import DataLoader
 import torchvision.transforms.transforms as T
-from mnist_text import *
+from gt_label_mnist import *
 
 class MNISTDataset(Dataset):
     def __init__(self, split='train', im_path='data/MNIST', im_size = 64, im_channels=1):
@@ -17,7 +17,7 @@ class MNISTDataset(Dataset):
         self.im_path = im_path
         self.im_size = im_size
         self.im_channels = im_channels
-        self.save_location = save_location
+        # self.save_location = save_location
         
         assert os.path.exists(im_path), "images path {} does not exist".format(im_path)
 
@@ -41,7 +41,7 @@ class MNISTDataset(Dataset):
     def __len__(self):
         return self.len
 
-    def __getitem__(self, index,attribute = None,temp = 0):
+    def __getitem__(self, index):
         ######image processing#####
         im = Image.open(self.images[index])
         im_tensor = torchvision.transforms.Compose([
@@ -50,111 +50,190 @@ class MNISTDataset(Dataset):
             ])(im)
 
         ######text processing########
-        digit = self.digits[index]
-        attr = {
-            'area': area,
-            'length': length,
-            'thickness': thickness,
-            'slant': slant,
-            'width': width,
-            'height': height
-        }.get(attribute)
-        ##to indicate area or wide
-        if attribute is not None:
-            if temp ==1:            
-                string = attr(self.df, index, digit)
-            else:
-                string = attr(self.df, index)
-            att_list = []
-            l = area(self.df, index, digit)
-            att_list.append(l)
-            l = length(self.df, index)
-            att_list.append(l)
-            l = thickness(self.df, index)
-            att_list.append(l)
-            l = slant(self.df, index)
-            att_list.append(l)
-            l = width(self.df, index, digit)
-            att_list.append(l)
-            l = height(self.df, index)
-            att_list.append(l)
-        else:
-            string = None
-            att_list = []
-            
-        
-        return im_tensor, digit, string, att_list
+        digit = self.digits[index]        
+        att_list = []
+        l = area(self.df, index, digit)
+        att_list.append(l)
+        l = length(self.df, index)
+        att_list.append(l)
+        l = thickness(self.df, index)
+        att_list.append(l)
+        l = slant(self.df, index)
+        att_list.append(l)
+        l = width(self.df, index, digit)
+        att_list.append(l)
+        l = height(self.df, index)
+        att_list.append(l)   
+        return im_tensor, digit, att_list
 
 
-        
-
-def make_data(digit, attributetext, attribute, save_location, attribute_2 = None, split='train', 
-                    im_path='data/MNIST', im_size = 64):
+def make_data(save_location, split='train', 
+                    im_path='data/MNIST', 
+                    im_size = 64):
+    '''
+    For making a txt file with strings for all attributes
+    '''
     if not os.path.exists(save_location):
         os.mkdir(save_location)
     dataset = MNISTDataset(split=split, im_path=im_path, im_size = im_size)
-    if digit == 8:
-        text = f'MNIST hand written digit in white on black background. The digit is an {digit} and'
-    else:
-        text = f'MNIST hand written digit in white on black background. The digit is a {digit} and'
-    if 'area' in attribute or 'length' in attribute or 'height' in attribute:
-        text = text + f' has {attributetext}.'
-    else:
-        text = text + f' is {attributetext}.'
-    count = 0
-    pos_img = []
-    neg_img = []
-    label_list = []
+    
+    text = 'MNIST hand written digit in white on black background. '
     for index in tqdm(range(dataset.__len__())):
-        if 'area' in attribute or 'width' in attribute:
-            img, digitvalue, string, label = dataset.__getitem__(index,attribute,temp = 1)
+        img, digit, att_list = dataset.__getitem__(index)
+        captionlist = []
+
+        if digit == 8:
+            captionlist.append(text + "The digit is an 8.")
         else:
-            img, digitvalue, string, label = dataset.__getitem__(index,attribute,temp = 0)
+            captionlist.append(text + f"The digit is a {digit}.")
+        
+        for j in range(len(att_list)):
+            if j == 0 or j == 1 or j == 5:
+                captionlist.append(f'The digit has {att_list[j]}.')
+            else:
+                captionlist.append(f'The digit is {att_list[j]}.')
+        
+        save_image(img,os.path.join(save_location, f'{index}.png'))
+        with open(os.path.join(save_location,f'{index}.txt'), 'w') as f:
+            f.write("\n".join(captionlist))
 
-        if digit == int(digitvalue) and attributetext == string:
-            pos_img.append(img)
-       
-    for i in tqdm(range(len(pos_img))):
-        save_image(pos_img[i],os.path.join(save_location, f'{i}.png'))
-        with open(os.path.join(save_location,f'{i}.txt'), 'w') as f:
-            f.write(text)
+def make_customized_data_and(save_location, refdigit, attributes_index, attributes_text, split = "train", im_path='data/MNIST', 
+                    im_size = 64):
+    ''' For requirements with conjunctions
+    Indices for attributes:
+    0 = area,
+    1 = length,
+    2 = thickness,
+    3 = slant,
+    4 = width,
+    5 = height
+    '''
+    if os.path.exists(save_location):
+        print("removing old directory!!")
+        os.system(f"rm -rf {save_location}")
+    os.mkdir(save_location)
+    dataset = MNISTDataset(split=split, im_path=im_path, im_size = im_size)
     
+    for index in tqdm(range(dataset.__len__())):
+        img, digit, att_list = dataset.__getitem__(index)
+        if int(digit) != int(refdigit):
+            continue
+        text = ""
+        if digit == 8:
+            text = f'MNIST hand written digit in white on black background. The digit is an {digit}'
+        else:
+            text = f'MNIST hand written digit in white on black background. The digit is a {digit}'
+
+        flag = 1
+        hastext = []
+        istext = []
+        for j in range(len(attributes_index)):
+            if attributes_text[j].lower().strip() == att_list[attributes_index[j]].lower().strip():
+                if attributes_index[j] == 0 or attributes_index[j] == 1 or attributes_index[j] == 5:
+
+                    hastext.append(f' {att_list[attributes_index[j]]}')                   
+                else:
+                    istext.append( f' {att_list[attributes_index[j]]}')
+            else:    
+                flag = 0
+                
+    
+        if flag == 1: 
+            if (len(istext) + len(hastext))>0:
+                if (len(istext) + len(hastext)) == 1:
+                    text = text + " and"
+                else:
+                    text = text + ","
+                if len(istext)>0:
+                    for i in range(len(istext)):
+                        text = text + istext[i]
+                        if i == len(istext)-2 and len(hastext)==0:
+                            text = text + " and"
+                        else:
+                            text = text + ","
+                if len(hastext)>0:
+                    if len(hastext)==1 and len(istext)!= 0:
+                        text = text + " and"
+                    text = text + " has"
+                    for i in range(len(hastext)):
+                        text = text + hastext[i]
+                        if i == len(hastext)-2:
+                            text = text + " and"
+                        elif i == len(hastext)-1:
+                            text = text + "."
+                        else:
+                            text = text + "," 
+            save_image(img,os.path.join(save_location, f'{index}.png'))
+            with open(os.path.join(save_location,f'{index}.txt'), 'w') as f:
+                f.write(text)
+    lst = os.listdir(save_location)
+    print("total number of images: ", len(lst)/2)
+
+def make_customized_data_or(save_location, refdigit, attributes_index, attributes_text, split = "train", im_path='data/MNIST', 
+                    im_size = 64):
+    ''' For requirements with disjunctions
+    Indices for attributes:
+    0 = area,
+    1 = length,
+    2 = thickness,
+    3 = slant,
+    4 = width,
+    5 = height
+    '''
+    if os.path.exists(save_location):
+        print("removing old directory!!")
+        os.system(f"rm -rf {save_location}")
+    os.mkdir(save_location)
+    dataset = MNISTDataset(split=split, im_path=im_path, im_size = im_size)
+    
+    # text = 'MNIST hand written digit in white on black background. '
+    for index in tqdm(range(dataset.__len__())):
+        img, digit, att_list = dataset.__getitem__(index)
+        if int(digit) != int(refdigit):
+            continue
+        text = ""
+        if digit == 8:
+            text = f'MNIST hand written digit in white on black background. The digit is an {digit} and'
+        else:
+            text = f'MNIST hand written digit in white on black background. The digit is a {digit} and'
+
+        flag = 0
+        if attributes_index == 0 or attributes_index == 1 or attributes_index == 5:
+            text = text + " has"
+            
+        else:
+            text = text + " is"
+        for j in range(len(attributes_text)):
+            if attributes_text[j].lower().strip() == att_list[attributes_index].lower().strip():     
+                flag = 1
+                break
+                
+    
+        if flag == 1: 
+            for i in range(len(attributes_text)):
+                text = text + " " + attributes_text[i]
+                if i==len(attributes_text)-1:
+                    text = text + "."
+                else:
+                    text = text + " or"
+
+            save_image(img,os.path.join(save_location, f'{index}.png'))
+            with open(os.path.join(save_location,f'{index}.txt'), 'w') as f:
+                f.write(text)
+    lst = os.listdir(save_location)
+    print("total number of images: ", len(lst)/2)
+
+if __name__ == "__main__":
+    save_location = "data/mnist_r7"
+    attributes_index = 3
+    attributes_text = ["very thin", "very thick"]
+    refdigit = 8
+    make_customized_data_or(save_location = save_location, refdigit = refdigit, attributes_index = attributes_index, attributes_text = attributes_text)
 
 
-if __name__=='__main__':
-    reqs = ['r1', 'r2', 'r3', 'r4', 'r5', 'r6']
-    text = {
-        'r1': 'very low height',
-        'r2': 'very thick',
-        'r3': 'very thick',
-        'r4': 'very left leaning',
-        'r5': 'very right leaning',
-        'r6': 'very low height'
-    }
-    
-    img_path = 'data/MNIST'
-    im_size = 64
-    digit ={
-        'r1': 2,
-        'r2': 3,
-        'r3': 7,
-        'r4': 9,
-        'r5': 6,
-        'r6': 0,
-    }
-    
-    attribute = {
-        'r1': 'height',
-        'r2': 'thickness',
-        'r3': 'thickness',
-        'r4': 'slant',
-        'r5': 'slant',
-        'r6': 'height'
-    }
-    
-    for req in reqs:    
-        save_location=f'data/mnist_{req}'
-        make_data(digit = digit[req], attributetext = text[req], attribute = attribute[req], save_location = save_location,
-                    split='train', im_path=img_path, im_size = im_size)
+
+
+
+
     
     
