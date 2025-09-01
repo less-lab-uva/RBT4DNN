@@ -32,12 +32,14 @@ The following table shows glossary terms for MNIST digits for different ranges o
 |[M4](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M4)|The digit is a 9 and is very left leaning|label as 9|
 |[M5](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M5)|The digit is a 6 and is very right leaning|label as 6|
 |[M6](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M6)|The digit is a 0 and has very low height|label as 0|
+|[M7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/M7)|The digit is an 8 and is very thin or very thick|label as 8|
 |[C1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C1)|The person is wearing eyeglasses and has black hair|label as eyeglasses|
 |[C2](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C2)|The person is wearing eyeglasses and has brown hair|label as eyeglasses|
 |[C3](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C3)|The person is wearing eyeglasses and has a mustache|label as eyeglasses|
 |[C4](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C4)|The person is wearing eyeglasses and has wavy hair|label as eyeglasses|
 |[C5](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C5)|The person is wearing eyeglasses and is bald|label as eyeglasses|
 |[C6](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C6)|The person is wearing eyeglasses and a hat|label as eyeglasses|
+|[C7](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/C7)|The person is wearing eyeglasses and has a 5 o’clock shadow or goatee or mustache or beard or sideburns|label as eyeglasses|
 |[S1](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S1)|A vehicle is within 10 meters, in front, and in the same lane|not accelerate|
 |[S2](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S2)|The ego lane is controlled by a red or yellow light|decelerate|
 |[S3](https://github.com/nusratdeeptee/RBT4DNN/tree/main/data/images_from_loras/S3)|The ego lane is controlled by a green light, and no vehicle is in front, in the same lane, and within 10 meters|accelerate|
