@@ -8,9 +8,32 @@ from PIL import Image
 from pathlib import Path
 from tqdm import tqdm
 from train_classifier import ResnetModel
-from calculate_metrics import GeneratedDataset
 
+class GeneratedDataset:
+    def __init__(self, data_dir: Path):
+        self.data_dir = data_dir
+        self.images = [self.data_dir / img for img in os.listdir(data_dir) if img.endswith('.png')]
+        # self.transform = transforms.Compose([
+        #     transforms.Resize((384, 384)),
+        #     transforms.ToTensor(),
+        #     transforms.Normalize(mean=[0.5,0.5,0.5], std=[0.5,0.5,0.5])
+        # ])
+        self.transform = transforms.Compose([
+            transforms.ToTensor(),
+            transforms.Normalize(mean=[0.485,0.456,0.406], std=[0.229,0.224,0.225])
+        ])
 
+    def __len__(self):
+        return len(self.images)
+    
+    def __getitem__(self, idx):
+        img_path = self.images[idx]
+        img = Image.open(img_path)
+        img = self.transform(img)
+        return img
+
+    def get_image_path(self, idx):
+        return self.images[idx]
 
 class TestDataset:
     def __init__(self, csv_path: Path, requirement: str):
