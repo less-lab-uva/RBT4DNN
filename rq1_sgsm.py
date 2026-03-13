@@ -64,14 +64,14 @@ class TestDataset:
         return self.images[idx]
 
 RESNET101_CLASSIFIERS = {
-    'f1': "/project/lesslab/rbt4dnn/sg_dataset/trained_models/resnet101/f1.pth",
-    'f2': "/project/lesslab/rbt4dnn/sg_dataset/trained_models/resnet101/f2.pth",
-    'f3a': "/project/lesslab/rbt4dnn/sg_dataset/trained_models/resnet101/f3a.pth",
-    'f4a': "/project/lesslab/rbt4dnn/sg_dataset/trained_models/resnet101/f4a.pth",
-    'f4b': "/project/lesslab/rbt4dnn/sg_dataset/trained_models/resnet101/f4b.pth",
-    'f5a': "/project/lesslab/rbt4dnn/sg_dataset/trained_models/resnet101/f5a.pth",
-    'f6': "/project/lesslab/rbt4dnn/sg_dataset/trained_models/resnet101/f6.pth",
-    'f7': "/project/lesslab/rbt4dnn/sg_dataset/trained_models/resnet101/f7.pth",
+    'f1': "trained_models/resnet101/f1.pth",
+    'f2': "trained_models/resnet101/f2.pth",
+    'f3a': "trained_models/resnet101/f3a.pth",
+    'f4a': "trained_models/resnet101/f4a.pth",
+    'f4b': "trained_models/resnet101/f4b.pth",
+    'f5a': "trained_models/resnet101/f5a.pth",
+    'f6': "trained_models/resnet101/f6.pth",
+    'f7': "trained_models/resnet101/f7.pth",
 }
 
 
